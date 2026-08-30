@@ -1,0 +1,9 @@
+{
+  "title": "Our Story",
+  "tagline": "One year, so many little adventures",
+  "personA": "Luca",
+  "personB": "Kaltrina",
+  "startDate": "2025-08-30",
+  "mapDefaultCenter": [46.8182, 8.2275],
+  "mapDefaultZoom": 5
+}
