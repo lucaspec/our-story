@@ -3,7 +3,6 @@ import EventCard from './EventCard.jsx';
 export default function Timeline({ events, startDate, focusedEventId }) {
   return (
     <div className="timeline">
-      <div className="timeline__line" aria-hidden="true" />
       <ol className="timeline__list">
         {events.map((event, index) => (
           <EventCard

@@ -16,7 +16,6 @@ function dayNumber(dateStr, startDate) {
 export default function EventCard({ event, index, startDate, autoFocus }) {
   const ref = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const side = index % 2 === 0 ? 'left' : 'right';
   const day = dayNumber(event.date, startDate);
 
   useEffect(() => {
@@ -30,7 +29,7 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
   const remaining = photos.length - visiblePhotos.length;
 
   return (
-    <li id={`event-${event.id}`} ref={ref} className={`event-card event-card--${side}`}>
+    <li id={`event-${event.id}`} ref={ref} className="event-card">
       <span className="event-card__dot" aria-hidden="true" />
       <div className="event-card__content">
         <p className="event-card__day">{day >= 0 ? `Day ${day}` : formatDate(event.date)}</p>
