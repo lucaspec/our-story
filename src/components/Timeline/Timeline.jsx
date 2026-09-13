@@ -4,8 +4,8 @@ import EventCard from './EventCard.jsx';
 // Keep in sync with the .event-card__content max-width in global.css —
 // it's how we know how much side-to-side slack the snake has to work with.
 const CONTENT_WIDTH = 420;
-const MAX_AMPLITUDE = 140;
-const WAVE_FREQUENCY = 0.8;
+const MAX_AMPLITUDE = 150;
+const WAVE_FREQUENCY = 0.9;
 
 function buildThreadPath(points) {
   if (points.length === 0) return '';
@@ -33,7 +33,8 @@ export default function Timeline({ events, startDate, focusedEventId }) {
       if (items.length === 0) return;
 
       const containerWidth = container.clientWidth;
-      const amplitude = Math.max(0, Math.min(MAX_AMPLITUDE, (containerWidth - CONTENT_WIDTH) / 2 - 24));
+      const slack = containerWidth - CONTENT_WIDTH;
+      const amplitude = Math.max(0, Math.min(MAX_AMPLITUDE, slack * 0.45));
 
       items.forEach((li, i) => {
         const offset = Math.round(Math.sin(i * WAVE_FREQUENCY) * amplitude);
