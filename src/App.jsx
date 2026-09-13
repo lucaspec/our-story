@@ -51,7 +51,7 @@ export default function App() {
       <footer className="app__footer">
         <span className="app__footer-rule" aria-hidden="true" />
         <p>
-          Made with love by {config.personA} &amp; {config.personB}
+          Made with love by {config.personA}
         </p>
       </footer>
       <BackToTop />
