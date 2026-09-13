@@ -35,7 +35,9 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
       <div className="event-card__content">
         <p className="event-card__day">{day >= 0 ? `Day ${day}` : formatDate(event.date)}</p>
         <h2 className="event-card__date">{formatDate(event.date)}</h2>
+        {event.title && <h3 className="event-card__title">{event.title}</h3>}
         {event.location?.name && <p className="event-card__location">📍 {event.location.name}</p>}
+        {event.text && <p className="event-card__text">{event.text}</p>}
 
         {visiblePhotos.length > 0 && (
           <div className={`event-card__photos event-card__photos--${visiblePhotos.length}`}>

@@ -1,7 +1,7 @@
 # Our Story
 
 A one-year anniversary webapp: a timeline and a map of everywhere you two have been,
-built automatically from your Google Photos.
+built automatically from a folder of your photos.
 
 It has two views:
 
@@ -13,38 +13,28 @@ The steps below replace that sample data with your real photos.
 
 ## How the automation works
 
-Google's Photos API doesn't let apps read who's tagged in a photo — that's blocked for
-privacy. But a **Google Takeout** export of your library includes a small JSON file next
-to every photo with exactly what we need: who's tagged, the timestamp, and GPS
-coordinates. `scripts/import-takeout.mjs` reads those JSON files, keeps only the photos
-that include your two names, groups them into one "date" per day, reverse-geocodes the
-location into a place name, resizes the photos, and writes everything the site needs.
+Point `scripts/import-photos.mjs` at any folder of photos — a Google Photos album you
+downloaded, a folder from your phone, whatever. Every photo in that folder is used;
+there's no filtering by who's in the picture. For each photo it figures out the date
+and (if available) the GPS location from the photo's own EXIF data (or from a Google
+Takeout JSON sidecar, if one happens to sit next to the photo), groups photos into one
+"date" per day, reverse-geocodes the location into a place name, resizes the photos, and
+writes everything the site needs.
 
 You'll re-run that one script any time you want to refresh the site with new photos —
 nothing else about the app needs to change.
 
-**Before you start:** in the Google Photos app, tag yourself and your partner as people
-in a handful of your photos together (Google will then suggest the same tag for similar
-faces — confirm those suggestions so more photos get tagged). The import script can only
-find photos that already have those tags saved in Google Photos.
+## 1. Get your photos into one folder (or a zip)
 
-## 1. Export your photos from Google Takeout
+Any folder works, as long as the photos already have their original date (and ideally
+GPS) metadata intact — e.g. photos downloaded from a Google Photos album, or copied
+straight off your phone. Avoid photos that have been re-saved/re-exported by an app that
+strips EXIF data, since that's how the date and location get determined.
 
-1. Go to [takeout.google.com](https://takeout.google.com).
-2. Click **Deselect all**, then select only **Google Photos**.
-3. Under Google Photos' own options, you can choose specific albums, or leave it as "All
-   photo albums included" to scan your whole library.
-4. Choose **.zip**, a size that suits your library (2 GB is a safe default — Takeout
-   splits into multiple zip files automatically if needed), and export.
-5. Once Google emails you the download link(s), download and **unzip** them. You'll get
-   a folder structure like:
-   ```
-   Takeout/Google Photos/Photos from 2025/IMG_1234.jpg
-   Takeout/Google Photos/Photos from 2025/IMG_1234.jpg.supplemental-metadata.json
-   ...
-   ```
-   If you downloaded multiple zip parts, unzip them all into the same `Takeout` folder —
-   the script scans recursively so it doesn't matter how they're organized.
+You don't need to unzip anything first — the import script accepts a `.zip` file
+directly (handy for a Google Photos album download or a Takeout export), or a folder
+containing one or more `.zip` parts (Takeout splits large exports into multiple zips),
+and extracts them automatically.
 
 ## 2. Install dependencies
 
@@ -57,8 +47,7 @@ npm install
 Open `config.json` and fill in:
 
 - `title` / `tagline` — shown at the top of the site.
-- `personA` / `personB` — must match the two names as they appear as **person tags in
-  Google Photos** (so the import script can match them).
+- `personA` / `personB` — your two names, shown in the header.
 - `startDate` — the date you two started dating, `YYYY-MM-DD` (used for the "Day N" /
   days-together counter). It's currently a placeholder — set it to the real date.
 - `mapDefaultCenter` / `mapDefaultZoom` — where the map opens before any pins are added;
@@ -67,30 +56,30 @@ Open `config.json` and fill in:
 ## 4. Run the import
 
 ```bash
-npm run import-photos -- --input "/path/to/Takeout/Google Photos"
+npm run import-photos -- --input "/path/to/your/album"
 ```
 
 Useful options:
 
 | Flag | Default | What it does |
 | --- | --- | --- |
-| `--names "Luca,Kaltrina"` | names from `config.json` | Which person tags to match |
-| `--require both\|either` | `either` | `both` keeps only photos with both of you tagged together; `either` also keeps photos where just one of you appears (e.g. one of you took the photo) |
 | `--no-geocode` | geocoding on | Skip turning coordinates into place names (faster, useful for a quick test run) |
+| `--output-photos <dir>` | `public/photos` | Where resized photos are written |
+| `--output-data <file>` | `public/data/events.json` | Where the generated event data is written |
 
-This can take a while the first time (it resizes every matching photo and looks up place
-names one at a time, out of respect for the free geocoding service's rate limit). It
-prints a summary at the end, e.g.:
+This can take a while the first time (it resizes every photo and looks up place names
+one at a time, out of respect for the free geocoding service's rate limit). It prints a
+summary at the end, e.g.:
 
 ```
-Found 4213 image files.
-Kept 187 photos (skipped: 12 no sidecar, 3 no timestamp, 4011 didn't match people filter, 0 duplicates).
+Found 187 image files.
+Kept 187 photos (skipped 0 duplicates).
 Wrote 62 dates to public/data/events.json
 Photos saved under public/photos/
 ```
 
-It's safe to re-run any time — e.g. after a new Takeout export — it regenerates
-`public/data/events.json` and `public/photos/` from scratch.
+It's safe to re-run any time — e.g. after adding more photos to the folder — it
+regenerates `public/data/events.json` and `public/photos/` from scratch.
 
 ## 5. Preview it
 
@@ -100,7 +89,29 @@ npm run dev
 
 Open the printed local URL. You should see your real dates instead of the sample banner.
 
-## 6. Deploy it — privately
+## 6. Add titles and stories to your dates
+
+The import script only knows dates, locations, and photos — it doesn't know what actually
+happened. To add a title and a bit of text (the story, an inside joke, whatever) to a
+date, edit `public/data/captions.json`:
+
+```json
+{
+  "2025-08-30": {
+    "title": "The coffee that started it all",
+    "text": "We said 'just a quick coffee' and then closed the place down four hours later."
+  }
+}
+```
+
+The key is the event's date (`YYYY-MM-DD`, matching the date shown in the timeline).
+Both `title` and `text` are optional — add just one if you like. This file is separate
+from `events.json` on purpose: re-running the import script regenerates `events.json`
+from your photos, but never touches `captions.json`, so your captions are safe across
+re-imports. It's committed to git (unlike your photos), so back it up/version it like any
+other text file.
+
+## 7. Deploy it — privately
 
 Your photos and `public/data/events.json` are listed in `.gitignore` on purpose, so they
 never get pushed to GitHub even if this repo is public. That means deployment needs to
@@ -127,8 +138,9 @@ public repos) are visible to anyone with the link.
 
 ```
 config.json                    Site title, names, anniversary start date, map defaults
-scripts/import-takeout.mjs     Parses Takeout export -> public/data/events.json + photos
+scripts/import-photos.mjs      Imports a photo folder -> public/data/events.json + photos
 public/data/events.sample.json Demo data shown until you run the import script
+public/data/captions.json      Your hand-written titles/text per date, keyed by date
 public/sample-photos/          Placeholder images used by the demo data
 src/                           The React app (Timeline view, Map view)
 ```

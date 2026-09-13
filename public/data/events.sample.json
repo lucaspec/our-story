@@ -5,7 +5,6 @@
       "id": "sample-1",
       "date": "2025-08-30",
       "location": { "name": "Zurich, Switzerland", "lat": 47.3769, "lng": 8.5417 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [
         { "thumb": "/sample-photos/coffee-1.svg", "full": "/sample-photos/coffee-1.svg" },
         { "thumb": "/sample-photos/coffee-2.svg", "full": "/sample-photos/coffee-2.svg" }
@@ -15,7 +14,6 @@
       "id": "sample-2",
       "date": "2025-09-14",
       "location": { "name": "Interlaken, Switzerland", "lat": 46.6863, "lng": 7.8632 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [
         { "thumb": "/sample-photos/hike-1.svg", "full": "/sample-photos/hike-1.svg" },
         { "thumb": "/sample-photos/hike-2.svg", "full": "/sample-photos/hike-2.svg" }
@@ -25,14 +23,12 @@
       "id": "sample-3",
       "date": "2025-10-05",
       "location": { "name": "Zurich, Switzerland", "lat": 47.3769, "lng": 8.5417 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [{ "thumb": "/sample-photos/dinner-1.svg", "full": "/sample-photos/dinner-1.svg" }]
     },
     {
       "id": "sample-4",
       "date": "2025-12-20",
       "location": { "name": "Paris, France", "lat": 48.8566, "lng": 2.3522 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [
         { "thumb": "/sample-photos/trip-1.svg", "full": "/sample-photos/trip-1.svg" },
         { "thumb": "/sample-photos/trip-2.svg", "full": "/sample-photos/trip-2.svg" },
@@ -43,14 +39,12 @@
       "id": "sample-5",
       "date": "2026-04-18",
       "location": { "name": "Zurich, Switzerland", "lat": 47.3866, "lng": 8.5497 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [{ "thumb": "/sample-photos/picnic-1.svg", "full": "/sample-photos/picnic-1.svg" }]
     },
     {
       "id": "sample-6",
       "date": "2026-07-02",
       "location": { "name": "Zurich, Switzerland", "lat": 47.3769, "lng": 8.5417 },
-      "people": ["Luca", "Kaltrina"],
       "photos": [{ "thumb": "/sample-photos/movie-1.svg", "full": "/sample-photos/movie-1.svg" }]
     }
   ]

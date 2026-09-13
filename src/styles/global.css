@@ -225,10 +225,22 @@ body {
   margin: 0.15rem 0 0.4rem;
 }
 
+.event-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+}
+
 .event-card__location {
   margin: 0 0 0.75rem;
   color: var(--color-text-soft);
   font-size: 0.9rem;
+}
+
+.event-card__text {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .event-card__photos {

@@ -1,17 +1,24 @@
 #!/usr/bin/env node
 /**
- * Parses a Google Takeout "Google Photos" export and builds the data this webapp needs:
- * for every photo, who's tagged in it, when it was taken, and where — then writes a
- * resized copy of each kept photo plus public/data/events.json.
+ * Imports a plain folder ("album") of photos and builds the data this webapp needs:
+ * for every photo, when it was taken and where — then writes a resized copy of each
+ * photo plus public/data/events.json. Every photo in the folder is used; there's no
+ * person filtering, so it works with any album, not just a Google Takeout export.
+ *
+ * Date and location come from (in order of preference):
+ *   1. A Google Takeout-style JSON sidecar next to the photo, if present.
+ *   2. EXIF data embedded in the photo itself.
+ *   3. The photo file's last-modified time (date only, no location).
+ *
+ * --input can be a folder, a single .zip file, or a folder containing one or more .zip
+ * files (e.g. Takeout splits large exports into multiple zip parts) — zips are
+ * extracted to a temp directory automatically and cleaned up when the import finishes.
  *
  * Usage:
- *   node scripts/import-takeout.mjs --input /path/to/Takeout/Google\ Photos [options]
+ *   node scripts/import-photos.mjs --input /path/to/album [options]
  *
  * Options:
- *   --input <dir>        Required. Root folder to scan (the unzipped "Google Photos" folder).
- *   --names "A,B"         Names to match against Google Photos' people tags. Defaults to
- *                          personA/personB from config.json.
- *   --require both|either Only keep photos tagged with both names, or either one. Default: either.
+ *   --input <path>         Required. A folder to scan (searched recursively), or a .zip file.
  *   --no-geocode           Skip reverse geocoding (faster, no location names — just coordinates).
  *   --output-photos <dir>  Default: public/photos
  *   --output-data <file>   Default: public/data/events.json
@@ -19,34 +26,29 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import os from 'node:os';
 import crypto from 'node:crypto';
 import sharp from 'sharp';
+import * as exifr from 'exifr';
+import unzipper from 'unzipper';
+import heicConvert from 'heic-convert';
+
+const HEIC_EXTENSIONS = new Set(['.heic', '.heif']);
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.heic', '.heif', '.webp']);
 const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/reverse';
 const GEOCODE_DELAY_MS = 1100; // Nominatim usage policy: max 1 request/second.
 
 function parseArgs(argv) {
-  const args = { require: 'either', geocode: true, outputPhotos: 'public/photos', outputData: 'public/data/events.json' };
+  const args = { geocode: true, outputPhotos: 'public/photos', outputData: 'public/data/events.json' };
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     if (arg === '--input') args.input = argv[++i];
-    else if (arg === '--names') args.names = argv[++i];
-    else if (arg === '--require') args.require = argv[++i];
     else if (arg === '--no-geocode') args.geocode = false;
     else if (arg === '--output-photos') args.outputPhotos = argv[++i];
     else if (arg === '--output-data') args.outputData = argv[++i];
   }
   return args;
-}
-
-async function loadConfig() {
-  try {
-    const raw = await fs.readFile(new URL('../config.json', import.meta.url), 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return {};
-  }
 }
 
 async function walk(dir) {
@@ -61,6 +63,44 @@ async function walk(dir) {
     }
   }
   return results;
+}
+
+async function extractZip(zipPath) {
+  const dest = await fs.mkdtemp(path.join(os.tmpdir(), 'our-story-import-'));
+  console.log(`  extracting ${path.basename(zipPath)} ...`);
+  const directory = await unzipper.Open.file(zipPath);
+  await directory.extract({ path: dest, concurrency: 5 });
+  return dest;
+}
+
+// Resolves --input into a flat file list, transparently extracting any .zip files
+// found (whether --input itself is a zip, or a folder containing zip parts) into
+// temp directories. Returns the files plus the temp dirs to clean up afterwards.
+async function collectFiles(inputPath) {
+  const stat = await fs.stat(inputPath);
+  const tempDirs = [];
+
+  if (stat.isFile()) {
+    if (path.extname(inputPath).toLowerCase() !== '.zip') {
+      throw new Error(`--input must be a folder or a .zip file, got: ${inputPath}`);
+    }
+    const dest = await extractZip(inputPath);
+    tempDirs.push(dest);
+    return { files: await walk(dest), tempDirs };
+  }
+
+  const rawFiles = await walk(inputPath);
+  const files = [];
+  for (const file of rawFiles) {
+    if (path.extname(file).toLowerCase() === '.zip') {
+      const dest = await extractZip(file);
+      tempDirs.push(dest);
+      files.push(...(await walk(dest)));
+    } else {
+      files.push(file);
+    }
+  }
+  return { files, tempDirs };
 }
 
 function stripJsonSuffix(filename) {
@@ -101,8 +141,7 @@ function findSidecar(imagePath, jsonFilesInDir) {
   return best ? path.join(dir, best) : null;
 }
 
-function extractMeta(json) {
-  const people = Array.isArray(json.people) ? json.people.map((p) => p.name).filter(Boolean) : [];
+function metaFromSidecar(json) {
   const geo =
     json.geoData && (json.geoData.latitude || json.geoData.longitude)
       ? json.geoData
@@ -111,11 +150,61 @@ function extractMeta(json) {
         : null;
   const timestamp = json.photoTakenTime?.timestamp ? Number(json.photoTakenTime.timestamp) * 1000 : null;
   return {
-    people,
     lat: geo ? geo.latitude : null,
     lng: geo ? geo.longitude : null,
     timestamp,
   };
+}
+
+async function metaFromExif(imgPath) {
+  try {
+    const data = await exifr.parse(imgPath, { gps: true, tiff: true, exif: true });
+    if (!data) return { lat: null, lng: null, timestamp: null };
+    const takenAt = data.DateTimeOriginal || data.CreateDate || data.ModifyDate || null;
+    return {
+      lat: typeof data.latitude === 'number' ? data.latitude : null,
+      lng: typeof data.longitude === 'number' ? data.longitude : null,
+      timestamp: takenAt instanceof Date ? takenAt.getTime() : null,
+    };
+  } catch {
+    return { lat: null, lng: null, timestamp: null };
+  }
+}
+
+async function resolveMeta(imgPath, jsonFilesInDir) {
+  let meta = { lat: null, lng: null, timestamp: null };
+  let dateSource = null;
+
+  const sidecarPath = findSidecar(imgPath, jsonFilesInDir);
+  if (sidecarPath) {
+    try {
+      const raw = await fs.readFile(sidecarPath, 'utf-8');
+      meta = metaFromSidecar(JSON.parse(raw));
+      if (meta.timestamp) dateSource = 'sidecar';
+    } catch {
+      // ignore unreadable sidecar, fall through to EXIF
+    }
+  }
+
+  if (!meta.timestamp || meta.lat == null) {
+    const exifMeta = await metaFromExif(imgPath);
+    if (!meta.timestamp && exifMeta.timestamp) {
+      meta.timestamp = exifMeta.timestamp;
+      dateSource = 'exif';
+    }
+    if (meta.lat == null) {
+      meta.lat = exifMeta.lat;
+      meta.lng = exifMeta.lng;
+    }
+  }
+
+  if (!meta.timestamp) {
+    const stat = await fs.stat(imgPath);
+    meta.timestamp = stat.mtimeMs;
+    dateSource = 'mtime';
+  }
+
+  return { ...meta, dateSource };
 }
 
 function localDateString(timestampMs) {
@@ -179,13 +268,24 @@ async function reverseGeocode(lat, lng, cache) {
   return cache[key];
 }
 
+// sharp's bundled libheif only decodes .avif, not .heic/.heif (HEIC decode is
+// patent-encumbered and excluded from the prebuilt binaries), so HEIC/HEIF
+// sources are pre-converted to a JPEG buffer with a pure-JS decoder first.
+async function toSharpInput(srcPath) {
+  const ext = path.extname(srcPath).toLowerCase();
+  if (!HEIC_EXTENSIONS.has(ext)) return srcPath;
+  const inputBuffer = await fs.readFile(srcPath);
+  return await heicConvert({ buffer: inputBuffer, format: 'JPEG', quality: 0.92 });
+}
+
 async function processImage(srcPath, outDir, id) {
   await fs.mkdir(outDir, { recursive: true });
   const thumbPath = path.join(outDir, `${id}-thumb.webp`);
   const fullPath = path.join(outDir, `${id}-full.webp`);
 
   try {
-    const image = sharp(srcPath, { failOn: 'none' }).rotate();
+    const input = await toSharpInput(srcPath);
+    const image = sharp(input, { failOn: 'none' }).rotate();
     await image.clone().resize({ width: 480, withoutEnlargement: true }).webp({ quality: 78 }).toFile(thumbPath);
     await image.clone().resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 85 }).toFile(fullPath);
     return true;
@@ -197,26 +297,25 @@ async function processImage(srcPath, outDir, id) {
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
-  const config = await loadConfig();
 
   if (!args.input) {
-    console.error('Missing required --input <path to Takeout Google Photos folder>');
-    process.exit(1);
-  }
-
-  const names = (args.names || `${config.personA || ''},${config.personB || ''}`)
-    .split(',')
-    .map((n) => n.trim())
-    .filter(Boolean);
-
-  if (names.length === 0) {
-    console.error('No names to match. Pass --names "A,B" or set personA/personB in config.json.');
+    console.error('Missing required --input <path to a folder of photos>');
     process.exit(1);
   }
 
   console.log(`Scanning ${args.input} ...`);
-  const allFiles = await walk(args.input);
+  const { files: allFiles, tempDirs } = await collectFiles(args.input);
 
+  try {
+    await processFiles(allFiles, args);
+  } finally {
+    for (const dir of tempDirs) {
+      await fs.rm(dir, { recursive: true, force: true });
+    }
+  }
+}
+
+async function processFiles(allFiles, args) {
   const jsonFilesByDir = new Map();
   const imageFiles = [];
   for (const file of allFiles) {
@@ -234,39 +333,12 @@ async function main() {
 
   const seenHashes = new Set();
   const kept = [];
-  let noSidecar = 0;
-  let noTimestamp = 0;
-  let filteredOut = 0;
+  const undated = [];
   let duplicates = 0;
 
   for (const imgPath of imageFiles) {
     const dir = path.dirname(imgPath);
-    const sidecarPath = findSidecar(imgPath, jsonFilesByDir.get(dir) || new Set());
-    if (!sidecarPath) {
-      noSidecar++;
-      continue;
-    }
-
-    let meta;
-    try {
-      const raw = await fs.readFile(sidecarPath, 'utf-8');
-      meta = extractMeta(JSON.parse(raw));
-    } catch {
-      noSidecar++;
-      continue;
-    }
-
-    if (!meta.timestamp) {
-      noTimestamp++;
-      continue;
-    }
-
-    const matches = names.filter((n) => meta.people.some((p) => p.toLowerCase() === n.toLowerCase()));
-    const passesFilter = args.require === 'both' ? matches.length === names.length : matches.length > 0;
-    if (!passesFilter) {
-      filteredOut++;
-      continue;
-    }
+    const meta = await resolveMeta(imgPath, jsonFilesByDir.get(dir) || new Set());
 
     const hash = await hashFile(imgPath);
     if (seenHashes.has(hash)) {
@@ -275,6 +347,8 @@ async function main() {
     }
     seenHashes.add(hash);
 
+    if (meta.dateSource === 'mtime') undated.push(imgPath);
+
     kept.push({
       srcPath: imgPath,
       hash,
@@ -282,16 +356,23 @@ async function main() {
       date: localDateString(meta.timestamp),
       lat: meta.lat,
       lng: meta.lng,
-      people: meta.people,
     });
   }
 
-  console.log(
-    `Kept ${kept.length} photos (skipped: ${noSidecar} no sidecar, ${noTimestamp} no timestamp, ${filteredOut} didn't match people filter, ${duplicates} duplicates).`
-  );
+  console.log(`Kept ${kept.length} photos (skipped ${duplicates} duplicates).`);
+  if (undated.length > 0) {
+    console.warn(
+      `\nWARNING: ${undated.length} photo(s) have no JSON sidecar and no EXIF date — ` +
+        `their date/location was guessed from the file's modified time instead, which is ` +
+        `likely wrong (e.g. "today" if you just unzipped them). Re-export these from Google ` +
+        `Takeout (which writes a JSON sidecar even for images with no embedded EXIF) rather ` +
+        `than a plain album download:`
+    );
+    for (const f of undated) console.warn(`  - ${f}`);
+  }
 
   if (kept.length === 0) {
-    console.log('Nothing to do — check your --names / --require settings and that photos are tagged in Google Photos.');
+    console.log('Nothing to do — check that --input points at a folder containing photos.');
     return;
   }
 
@@ -316,7 +397,6 @@ async function main() {
       location = { name, lat, lng };
     }
 
-    const people = [...new Set(photos.flatMap((p) => p.people))];
     const outDir = path.join(args.outputPhotos, date);
     const photoEntries = [];
 
@@ -332,7 +412,7 @@ async function main() {
     }
 
     if (photoEntries.length > 0) {
-      events.push({ id: `evt-${date}`, date, location, people, photos: photoEntries });
+      events.push({ id: `evt-${date}`, date, location, photos: photoEntries });
     }
     process.stdout.write(`  processed ${date} (${photoEntries.length} photos)\r\n`);
   }

@@ -7,9 +7,10 @@ public/data/events.json
 scripts/geocode-cache.json
 scripts/import-report.json
 
-# Optional local copy of the unzipped Google Takeout export
+# Optional local copy of the unzipped Google Takeout export (or the zip itself)
 takeout/
 Takeout/
+takeout-*.zip
 
 .DS_Store
 *.log
