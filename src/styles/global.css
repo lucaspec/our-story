@@ -184,7 +184,7 @@ body {
 .app__main {
   flex: 1;
   width: 100%;
-  max-width: 680px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 0 1.25rem 3rem;
 }
@@ -213,23 +213,34 @@ body {
 
 .timeline__thread {
   position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 50%;
-  width: 3px;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
   z-index: -1;
-  background:
-    repeating-linear-gradient(
-      65deg,
-      rgba(255, 253, 245, 0.35) 0px,
-      rgba(255, 253, 245, 0.35) 1px,
-      transparent 1px,
-      transparent 3px
-    ),
-    linear-gradient(to bottom, var(--color-border), var(--color-primary-dark) 6%, var(--color-primary-dark) 94%, var(--color-border));
-  box-shadow: 1px 0 2px rgba(60, 45, 20, 0.3), -1px 0 1px rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.timeline__thread-shadow {
+  fill: none;
+  stroke: rgba(45, 32, 15, 0.35);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transform: translate(2px, 3px);
+}
+
+.timeline__thread-line {
+  fill: none;
+  stroke: var(--color-primary-dark);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.timeline__thread-highlight {
+  fill: none;
+  stroke: rgba(255, 253, 245, 0.4);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 2 7;
 }
 
 .timeline__list {
@@ -238,13 +249,15 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
 .event-card {
   position: relative;
   width: 100%;
   padding: 0.5rem 0.5rem 0;
+  transform: translateX(var(--snake-offset, 0px));
+  transition: transform 0.2s ease;
 }
 
 .event-card__dot {
@@ -270,6 +283,8 @@ body {
 
 .event-card__content {
   position: relative;
+  max-width: 420px;
+  margin: 0 auto;
   background: var(--color-bg-alt);
   border-radius: 2px;
   padding: 1.75rem 1.5rem 1.5rem;
