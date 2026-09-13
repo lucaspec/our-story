@@ -13,9 +13,10 @@ function dayNumber(dateStr, startDate) {
   return diff;
 }
 
-export default function EventCard({ event, index, startDate, autoFocus }) {
+export default function EventCard({ event, index, startDate, autoFocus, onVisible }) {
   const ref = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
   const side = index % 2 === 0 ? 'left' : 'right';
   const day = dayNumber(event.date, startDate);
 
@@ -25,12 +26,47 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
     }
   }, [autoFocus]);
 
+  // Scroll-reveal: mark this card (and its position on the timeline) visible
+  // the first time it enters the viewport, then stop watching it.
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return undefined;
+
+    if (typeof IntersectionObserver === 'undefined') {
+      setIsVisible(true);
+      onVisible?.(index);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            onVisible?.(index);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [index]);
+
   const photos = event.photos || [];
   const visiblePhotos = photos.slice(0, 4);
   const remaining = photos.length - visiblePhotos.length;
 
   return (
-    <li id={`event-${event.id}`} ref={ref} className={`event-card event-card--${side}`}>
+    <li
+      id={`event-${event.id}`}
+      ref={ref}
+      className={`event-card event-card--${side} ${isVisible ? 'event-card--visible' : ''}`}
+      style={{ '--reveal-delay': `${(index % 4) * 90}ms` }}
+    >
       <span className="event-card__dot" aria-hidden="true" />
       <div className="event-card__content">
         <p className="event-card__day">{day >= 0 ? `Day ${day}` : formatDate(event.date)}</p>
