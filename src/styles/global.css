@@ -208,6 +208,28 @@ body {
 
 .timeline {
   position: relative;
+  z-index: 0;
+}
+
+.timeline__thread {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  z-index: -1;
+  background:
+    repeating-linear-gradient(
+      65deg,
+      rgba(255, 253, 245, 0.35) 0px,
+      rgba(255, 253, 245, 0.35) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(to bottom, var(--color-border), var(--color-primary-dark) 6%, var(--color-primary-dark) 94%, var(--color-border));
+  box-shadow: 1px 0 2px rgba(60, 45, 20, 0.3), -1px 0 1px rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
 }
 
 .timeline__list {
