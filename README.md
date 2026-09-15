@@ -147,6 +147,21 @@ src/                           The React app (Timeline view, Map view)
 
 ## Customizing the design
 
-All styling lives in `src/styles/global.css` — colors are defined as CSS variables at
-the top of the file (`--color-primary`, `--color-bg`, etc.) if you want to shift the
-palette. Fonts are loaded from Google Fonts in `index.html`.
+All styling lives in `src/styles/global.css`. The look is a paper scrapbook: a kraft
+`--board` that everything is stuck to, cream `--paper` pages on top of it, and a small
+set of accents (`--rust`, `--cherry`, `--olive`, `--mustard`, `--teal`) used for tape,
+stamps and pins. Shift those variables at the top of the file to re-tint the whole
+album. Fonts are loaded from Google Fonts in `index.html`: Caveat (handwriting),
+Playfair Display (titles), Bitter (body) and Special Elite (typewriter labels).
+
+A few details worth knowing before you change them:
+
+- The timeline cards snake left and right along a sine wave, and the thread is an SVG
+  curve traced through the pin of each card (`src/components/Timeline/Timeline.jsx`).
+  `MAX_AMPLITUDE` and `WAVE_FREQUENCY` control how wide and how often it swings;
+  `CONTENT_WIDTH` must stay in sync with the `.event-card__content` max-width, or the
+  wave will push cards off screen. Each card hides the cord behind it, so the curve
+  hangs straight down and only swings across in the open gap below — `SWING_LEAD` is
+  how far above a card's bottom edge that swing starts.
+- The thread stitches itself in as you scroll, and the pages fade up as they arrive
+  (`src/hooks/useReveal.js`). Both respect `prefers-reduced-motion`.
