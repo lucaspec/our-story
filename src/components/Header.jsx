@@ -39,7 +39,6 @@ export default function Header({ config, events }) {
         <div className="cover__postmark" aria-hidden="true">
           <span className="cover__postmark-top">since</span>
           <span className="cover__postmark-date">{stampDate(config.startDate)}</span>
-          <span className="cover__postmark-bottom">&#9733; first day &#9733;</span>
         </div>
 
         <div className="cover__inner reveal">
