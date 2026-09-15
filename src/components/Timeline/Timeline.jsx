@@ -218,7 +218,7 @@ export default function Timeline({ events, startDate, focusedEventId }) {
       <ol className="timeline__list">
         {items.map((item) =>
           item.type === 'chapter' ? (
-            <li className="chapter" key={`chapter-${item.key}`}>
+            <li className="chapter" id={`month-${item.key}`} key={`chapter-${item.key}`}>
               <span className="chapter__knot thread-node" aria-hidden="true" />
               <div className="chapter__plate reveal">
                 <span className="chapter__ghost" aria-hidden="true">
