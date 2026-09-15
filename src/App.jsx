@@ -8,6 +8,7 @@ import MapView from './components/Map/MapView.jsx';
 import SampleBanner from './components/SampleBanner.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import JumpToMonth from './components/JumpToMonth.jsx';
+import MusicPlayer from './components/MusicPlayer.jsx';
 
 export default function App() {
   const { loading, events, isSample } = useEvents();
@@ -56,6 +57,7 @@ export default function App() {
         </p>
       </footer>
       {view === 'timeline' && sortedEvents.length > 0 && <JumpToMonth events={sortedEvents} />}
+      {config.spotifyPlaylist && <MusicPlayer playlist={config.spotifyPlaylist} />}
       <BackToTop />
     </div>
   );

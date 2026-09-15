@@ -768,6 +768,123 @@ body::before {
 }
 
 /* ============================================================================
+   Music — a paper tab in the bottom-left that folds out our playlist
+   ========================================================================= */
+
+.music {
+  position: fixed;
+  left: clamp(0.9rem, 3vw, 2.1rem);
+  bottom: clamp(0.9rem, 3vw, 2.1rem);
+  z-index: 900;
+}
+
+.music__toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 0.05rem;
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  border: 1px solid var(--paper-edge);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 26%, var(--paper-bright), var(--paper) 64%),
+    var(--paper);
+  color: var(--rust-deep);
+  cursor: pointer;
+  box-shadow: var(--shadow-rest);
+  rotate: -4deg;
+  transition:
+    scale 0.3s var(--ease-out),
+    rotate 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
+}
+
+.music__toggle::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px dashed rgba(138, 69, 19, 0.35);
+  border-radius: 50%;
+}
+
+.music__toggle:hover,
+.music__toggle:focus-visible,
+.music__toggle[aria-expanded='true'] {
+  scale: 1.07;
+  rotate: 0deg;
+  box-shadow: var(--shadow-lift);
+}
+
+.music__toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.music__toggle span {
+  font-family: var(--font-stamp);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* Folded away with visibility rather than unmounted, so playback survives. */
+.music__panel {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.75rem);
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid var(--paper-edge);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-lift);
+  rotate: 1deg;
+  transform-origin: bottom left;
+  visibility: hidden;
+  opacity: 0;
+  translate: 0 8px;
+  scale: 0.96;
+  transition:
+    opacity 0.25s var(--ease-out),
+    translate 0.25s var(--ease-out),
+    scale 0.25s var(--ease-out),
+    visibility 0s linear 0.25s;
+}
+
+.music__panel[data-open='true'] {
+  visibility: visible;
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  transition:
+    opacity 0.25s var(--ease-out),
+    translate 0.25s var(--ease-out),
+    scale 0.25s var(--ease-out);
+}
+
+.music__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  line-height: 1;
+  color: var(--rust-deep);
+}
+
+.music__player {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* ============================================================================
    Timeline
    ========================================================================= */
 
