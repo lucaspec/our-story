@@ -7,6 +7,7 @@ import Timeline from './components/Timeline/Timeline.jsx';
 import MapView from './components/Map/MapView.jsx';
 import SampleBanner from './components/SampleBanner.jsx';
 import BackToTop from './components/BackToTop.jsx';
+import JumpToMonth from './components/JumpToMonth.jsx';
 
 export default function App() {
   const { loading, events, isSample } = useEvents();
@@ -54,6 +55,7 @@ export default function App() {
           Made with love by {config.personA}
         </p>
       </footer>
+      {view === 'timeline' && sortedEvents.length > 0 && <JumpToMonth events={sortedEvents} />}
       <BackToTop />
     </div>
   );
