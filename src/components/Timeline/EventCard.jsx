@@ -26,7 +26,7 @@ function cardTitle(event, trip) {
   return prefix && title.startsWith(prefix) ? title.slice(prefix.length) : title;
 }
 
-export default function EventCard({ event, index, startDate, autoFocus, trip }) {
+export default function EventCard({ event, index, startDate, autoFocus, focusToken, trip }) {
   const ref = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const day = dayNumber(event.date, startDate);
@@ -36,13 +36,17 @@ export default function EventCard({ event, index, startDate, autoFocus, trip }) 
 
   useEffect(() => {
     if (autoFocus && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      ref.current.classList.add('event-card--flash');
-      const t = setTimeout(() => ref.current?.classList.remove('event-card--flash'), 2000);
+      const card = ref.current;
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Restart the flash even if it is still running from the last request.
+      card.classList.remove('event-card--flash');
+      void card.offsetWidth;
+      card.classList.add('event-card--flash');
+      const t = setTimeout(() => card.classList.remove('event-card--flash'), 2000);
       return () => clearTimeout(t);
     }
     return undefined;
-  }, [autoFocus]);
+  }, [autoFocus, focusToken]);
 
   const photos = event.photos || [];
   const visiblePhotos = photos.slice(0, 4);

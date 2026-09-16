@@ -780,6 +780,365 @@ body::before {
 }
 
 /* ============================================================================
+   Search — a card catalogue for the album
+   ========================================================================= */
+
+/* "find" stacks above "music" in the bottom-left, mirroring "top" above
+   "go to" on the right. Without a playlist it takes the corner itself. */
+.search {
+  position: fixed;
+  left: clamp(0.9rem, 3vw, 2.1rem);
+  bottom: clamp(0.9rem, 3vw, 2.1rem);
+  z-index: 902;
+}
+
+.music ~ .search {
+  bottom: calc(clamp(0.9rem, 3vw, 2.1rem) + 62px + 0.75rem);
+}
+
+.search__toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 0.05rem;
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  border: 1px solid var(--paper-edge);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 26%, var(--paper-bright), var(--paper) 64%),
+    var(--paper);
+  color: var(--rust-deep);
+  cursor: pointer;
+  box-shadow: var(--shadow-rest);
+  rotate: -3deg;
+  transition:
+    scale 0.3s var(--ease-out),
+    rotate 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
+}
+
+.search__toggle::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px dashed rgba(138, 69, 19, 0.35);
+  border-radius: 50%;
+}
+
+.search__toggle:hover,
+.search__toggle:focus-visible,
+.search__toggle[aria-expanded='true'] {
+  scale: 1.07;
+  rotate: 0deg;
+  box-shadow: var(--shadow-lift);
+}
+
+.search__toggle svg,
+.search__field svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.search__toggle span {
+  font-family: var(--font-stamp);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.search__scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba(46, 32, 12, 0.28);
+  animation: search-fade 0.2s var(--ease-out);
+}
+
+@keyframes search-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Anchored to the top rather than to the tab, so on a phone the keyboard
+   coming up never covers the field you are typing into. */
+.search__panel {
+  position: fixed;
+  z-index: 1;
+  top: calc(env(safe-area-inset-top, 0px) + clamp(0.75rem, 6vh, 4.5rem));
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: min(34rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - env(safe-area-inset-top, 0px) - clamp(1.5rem, 12vh, 9rem));
+  translate: -50% 0;
+  padding: 1rem 1rem 0.6rem;
+  border: 1px solid var(--paper-edge);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-lift), 0 30px 70px rgba(40, 26, 8, 0.28);
+  rotate: -0.4deg;
+  animation: search-in 0.28s var(--ease-out);
+}
+
+@keyframes search-in {
+  from {
+    opacity: 0;
+    translate: -50% -10px;
+    scale: 0.98;
+  }
+}
+
+.search__field {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 0.15rem 0.55rem;
+  color: var(--rust-deep);
+  /* The red header rule of an index card. */
+  border-bottom: 1px solid rgba(168, 67, 58, 0.4);
+}
+
+.search__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-stamp);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search__input::placeholder {
+  color: var(--ink-faint);
+}
+
+.search__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search__esc {
+  flex: 0 0 auto;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--paper-edge);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  font-family: var(--font-stamp);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper);
+}
+
+/* No Escape key to point at on a phone. */
+@media (hover: none) {
+  .search__esc {
+    display: none;
+  }
+}
+
+.search__count {
+  margin: 0.55rem 0.15rem 0.45rem;
+  font-family: var(--font-stamp);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.search__hint {
+  margin: 0.1rem 0.15rem 0.6rem;
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+
+.search__hint em {
+  font-style: normal;
+  color: var(--rust-deep);
+}
+
+.search__results {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0 -0.4rem;
+  padding: 0.15rem 0.4rem 0.5rem;
+  list-style: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.search__results li + li {
+  margin-top: 0.4rem;
+}
+
+/* Each hit is an index card: date stamped on the left, what happened in the
+   middle, the first photo clipped on the right. */
+.search__hit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--paper-edge);
+  background: var(--paper);
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.18s var(--ease-out),
+    border-color 0.18s var(--ease-out),
+    translate 0.18s var(--ease-out);
+}
+
+.search__hit[data-active='true'] {
+  border-color: rgba(138, 69, 19, 0.45);
+  background: #fff8e6;
+  box-shadow: inset 3px 0 0 var(--rust);
+  translate: 3px 0;
+}
+
+.search__stamp {
+  flex: 0 0 auto;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 3.1rem;
+  height: 3.3rem;
+  border: 1px dashed rgba(138, 69, 19, 0.4);
+  color: var(--rust-deep);
+  line-height: 1;
+}
+
+.search__stamp b {
+  font-family: var(--font-stamp);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.search__stamp i {
+  margin-top: 0.15rem;
+  font-family: var(--font-stamp);
+  font-style: normal;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.search__stamp small {
+  margin-top: 0.15rem;
+  font-family: var(--font-stamp);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+.search__stamp--trip {
+  border-style: solid;
+  border-radius: 50%;
+  width: 3.1rem;
+  height: 3.1rem;
+  color: var(--trip-ink, var(--rust));
+  border-color: currentColor;
+}
+
+.search__stamp--trip svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.search__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  gap: 0.12rem;
+}
+
+.search__kicker {
+  font-family: var(--font-stamp);
+  font-size: 0.52rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.search__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search__place {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search__text {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* A highlighter swipe, not a browser-yellow box. */
+.search__hit mark {
+  padding: 0 0.08em;
+  color: inherit;
+  background: linear-gradient(
+    100deg,
+    transparent 0 2%,
+    rgba(209, 161, 37, 0.5) 4% 94%,
+    transparent 97%
+  );
+  background-size: 100% 62%;
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+}
+
+.search__thumb {
+  flex: 0 0 auto;
+  width: 3.3rem;
+  height: 3.3rem;
+  object-fit: cover;
+  border: 3px solid var(--paper-bright);
+  box-shadow: 0 1px 3px rgba(60, 42, 18, 0.3);
+  rotate: 2deg;
+}
+
+/* ============================================================================
    Music — a paper tab in the bottom-left that folds out our playlist
    ========================================================================= */
 
@@ -3188,6 +3547,20 @@ body::before {
 
   .trip__stamp {
     width: 68px;
+  }
+
+  .search__panel {
+    padding: 0.85rem 0.75rem 0.4rem;
+  }
+
+  .search__hit {
+    gap: 0.6rem;
+    padding: 0.5rem;
+  }
+
+  .search__thumb {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 
   .trip__meta {

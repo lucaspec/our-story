@@ -9,12 +9,15 @@ import SampleBanner from './components/SampleBanner.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import JumpToMonth from './components/JumpToMonth.jsx';
 import MusicPlayer from './components/MusicPlayer.jsx';
+import Search from './components/Search.jsx';
 import Intro, { shouldOpenAlbum } from './components/Intro.jsx';
 
 export default function App() {
   const { loading, events, trips, isSample } = useEvents();
   const [view, setView] = useState('timeline');
-  const [focusedEventId, setFocusedEventId] = useState(null);
+  // What the timeline should scroll to next: a date or a trip folder. `at`
+  // changes on every request, so asking for the same card twice still moves.
+  const [focus, setFocus] = useState(null);
   const [intro, setIntro] = useState(shouldOpenAlbum);
 
   const sortedEvents = useMemo(
@@ -28,10 +31,12 @@ export default function App() {
 
   const closeIntro = useCallback(() => setIntro(false), []);
 
-  function focusEvent(id) {
-    setFocusedEventId(id);
+  const focusOn = useCallback((kind, id) => {
+    setFocus((f) => ({ kind, id, at: (f?.at || 0) + 1 }));
     setView('timeline');
-  }
+  }, []);
+  const focusEvent = useCallback((id) => focusOn('event', id), [focusOn]);
+  const focusTrip = useCallback((id) => focusOn('trip', id), [focusOn]);
 
   return (
     <div className="app">
@@ -49,7 +54,7 @@ export default function App() {
             events={sortedEvents}
             trips={trips}
             startDate={config.startDate}
-            focusedEventId={focusedEventId}
+            focus={focus}
           />
         ) : (
           <MapView events={sortedEvents} config={config} onSelectEvent={focusEvent} />
@@ -63,6 +68,14 @@ export default function App() {
       </footer>
       {view === 'timeline' && sortedEvents.length > 0 && <JumpToMonth events={sortedEvents} />}
       {config.spotifyPlaylist && <MusicPlayer playlist={config.spotifyPlaylist} />}
+      {sortedEvents.length > 0 && (
+        <Search
+          events={sortedEvents}
+          trips={trips}
+          onSelectEvent={focusEvent}
+          onSelectTrip={focusTrip}
+        />
+      )}
       <BackToTop />
       {intro && <Intro config={config} onDone={closeIntro} />}
     </div>

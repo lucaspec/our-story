@@ -30,7 +30,7 @@ function Stamp({ trip }) {
 
 // One trip, folded into a kraft pocket: a stamped cover, then every day of it
 // on its own card with its own caption, stitched to a seam down the middle.
-export default function TripSection({ trip, days, startDate, focusedEventId }) {
+export default function TripSection({ trip, days, startDate, focusedEventId, focusToken }) {
   // Seeded off the first day so the folder's tilt is stable and matches the
   // way the cards around it sit.
   const seed = days[0]?.index ?? 0;
@@ -74,6 +74,7 @@ export default function TripSection({ trip, days, startDate, focusedEventId }) {
               index={index}
               startDate={startDate}
               autoFocus={event.id === focusedEventId}
+              focusToken={focusToken}
               trip={trip}
             />
           ))}

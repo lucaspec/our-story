@@ -88,7 +88,7 @@ function buildItems(events, trips) {
   return items;
 }
 
-export default function Timeline({ events, trips, startDate, focusedEventId }) {
+export default function Timeline({ events, trips, startDate, focus }) {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
   const maskRef = useRef(null);
@@ -99,6 +99,15 @@ export default function Timeline({ events, trips, startDate, focusedEventId }) {
   const items = useMemo(() => buildItems(events, trips), [events, trips]);
 
   useReveal(containerRef, [events.length]);
+
+  const focusedEventId = focus?.kind === 'event' ? focus.id : null;
+  const focusToken = focus?.at;
+
+  // Cards scroll themselves into view; a folder is found by its id.
+  useEffect(() => {
+    if (focus?.kind !== 'trip') return;
+    document.getElementById(`trip-${focus.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [focus]);
 
   // Lay the cards out along a sine wave, then trace a curve through their dots.
   useEffect(() => {
@@ -275,6 +284,7 @@ export default function Timeline({ events, trips, startDate, focusedEventId }) {
               days={item.days}
               startDate={startDate}
               focusedEventId={focusedEventId}
+              focusToken={focusToken}
             />
           ) : (
             <EventCard
@@ -283,6 +293,7 @@ export default function Timeline({ events, trips, startDate, focusedEventId }) {
               index={item.index}
               startDate={startDate}
               autoFocus={item.event.id === focusedEventId}
+              focusToken={focusToken}
             />
           )
         )}
