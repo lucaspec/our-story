@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import config from '../config.json';
 import { useEvents } from './hooks/useEvents.js';
 import Header from './components/Header.jsx';
@@ -9,11 +9,13 @@ import SampleBanner from './components/SampleBanner.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import JumpToMonth from './components/JumpToMonth.jsx';
 import MusicPlayer from './components/MusicPlayer.jsx';
+import Intro, { shouldOpenAlbum } from './components/Intro.jsx';
 
 export default function App() {
   const { loading, events, isSample } = useEvents();
   const [view, setView] = useState('timeline');
   const [focusedEventId, setFocusedEventId] = useState(null);
+  const [intro, setIntro] = useState(shouldOpenAlbum);
 
   const sortedEvents = useMemo(
     () => [...events].sort((a, b) => a.date.localeCompare(b.date)),
@@ -23,6 +25,8 @@ export default function App() {
   useEffect(() => {
     document.title = `${config.title} — ${config.personA} & ${config.personB}`;
   }, []);
+
+  const closeIntro = useCallback(() => setIntro(false), []);
 
   function focusEvent(id) {
     setFocusedEventId(id);
@@ -59,6 +63,7 @@ export default function App() {
       {view === 'timeline' && sortedEvents.length > 0 && <JumpToMonth events={sortedEvents} />}
       {config.spotifyPlaylist && <MusicPlayer playlist={config.spotifyPlaylist} />}
       <BackToTop />
+      {intro && <Intro config={config} onDone={closeIntro} />}
     </div>
   );
 }

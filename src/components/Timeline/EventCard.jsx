@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Lightbox from './Lightbox.jsx';
+import Sticker from './Sticker.jsx';
 import {
   dateParts,
   dayNumber,
@@ -114,6 +115,9 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
             {photos.length} {photos.length === 1 ? 'photo' : 'photos'}
           </p>
         )}
+
+        {/* Last, so the ephemera sits on top of the page rather than under it. */}
+        {event.sticker && <Sticker type={event.sticker} seed={index} />}
       </article>
 
       {lightboxIndex !== null && (

@@ -105,7 +105,27 @@ date, edit `public/data/captions.json`:
 ```
 
 The key is the event's date (`YYYY-MM-DD`, matching the date shown in the timeline).
-Both `title` and `text` are optional — add just one if you like. This file is separate
+`title`, `text` and `sticker` are all optional — add just the ones you want.
+
+`sticker` pins a piece of ephemera to the card — a ticket stub for a gig, a pressed
+flower, a ring where somebody set a mug down:
+
+```json
+{
+  "2026-04-14": {
+    "title": "Tame Impala Concert",
+    "text": "What a show 🎸🌈",
+    "sticker": "pick"
+  }
+}
+```
+
+One of: `ticket`, `flower`, `coffee`, `star`, `clip`, `leaf`, `heart`, `plane`, `shell`,
+`pick`, `dice`, `brick`, `snow`, `cap`, `matchbook`, `pin`, `polaroid`, `dumbbell`. Each
+one picks its own corner, size, angle and colour from the card, so the same kind on two
+different dates does not look stamped from a template. An unknown name is ignored, so a
+typo can never break a card. Leave the field off for most dates — the pieces read as
+things you kept rather than decoration when they are the exception. This file is separate
 from `events.json` on purpose: re-running the import script regenerates `events.json`
 from your photos, but never touches `captions.json`, so your captions are safe across
 re-imports. It's committed to git (unlike your photos), so back it up/version it like any
@@ -165,3 +185,13 @@ A few details worth knowing before you change them:
   how far above a card's bottom edge that swing starts.
 - The thread stitches itself in as you scroll, and the pages fade up as they arrive
   (`src/hooks/useReveal.js`). Both respect `prefers-reduced-motion`.
+- The album arrives shut and tied with a ribbon (`src/components/Intro.jsx`); one click
+  unties it and the cover swings open on its spine. It shows once per visit — the flag
+  lives in `sessionStorage`, so closing the tab and coming back opens it again — and is
+  skipped outright for anyone who has asked for reduced motion. Escape or the skip button
+  cuts it short at any point.
+- The ephemera lives in `src/components/Timeline/Sticker.jsx`. Each piece declares which
+  slots on the card it may sit in (a coffee ring soaks into a corner, a paperclip only
+  goes on an edge), and everything else about it — the exact corner, the size, the angle,
+  the accent colour, whether it is mirrored — is drawn from the card's index via the same
+  deterministic `jitter()` the tilts use, so it stays put across re-renders.

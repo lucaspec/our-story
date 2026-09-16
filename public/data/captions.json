@@ -1,7 +1,8 @@
 {
   "2025-08-09": {
     "title": "Streetparade",
-    "text": "The day we met for the first time 🎉✨"
+    "text": "The day we met for the first time 🎉✨",
+    "sticker": "ticket"
   },
   "2025-08-15": {
     "title": "First Date",
@@ -17,7 +18,8 @@
   },
   "2025-09-20": {
     "title": "Where it all started",
-    "text": "The day I asked you to be my girlfriend, and you said YES 💍❤️"
+    "text": "The day I asked you to be my girlfriend, and you said YES 💍❤️",
+    "sticker": "heart"
   },
   "2025-09-27": {
     "title": "Meeting my Sister",
@@ -25,11 +27,13 @@
   },
   "2025-10-02": {
     "title": "Titanic Exhibition",
-    "text": "I will never let go 🚢🧊"
+    "text": "I will never let go 🚢🧊",
+    "sticker": "ticket"
   },
   "2025-10-08": {
     "title": "First Time in Stetten",
-    "text": "Flowers that never wilt 🌸"
+    "text": "Flowers that never wilt 🌸",
+    "sticker": "flower"
   },
   "2025-10-29": {
     "title": "Sleepover",
@@ -37,7 +41,8 @@
   },
   "2025-10-31": {
     "title": "Going for Drinks",
-    "text": "The day I gave you the monkey 🐒"
+    "text": "The day I gave you the monkey 🐒",
+    "sticker": "matchbook"
   },
   "2025-11-03": {
     "title": "Hürlimann",
@@ -45,7 +50,8 @@
   },
   "2025-11-09": {
     "title": "Kunstmuseum",
-    "text": "This was the day we had our first time... 🎨🙈"
+    "text": "This was the day we had our first time... 🎨🙈",
+    "sticker": "ticket"
   },
   "2025-11-10": {
     "title": "Random Date",
@@ -53,27 +59,33 @@
   },
   "2025-11-27": {
     "title": "Illuminarium",
-    "text": "You have a very kissable face 😘"
+    "text": "You have a very kissable face 😘",
+    "sticker": "star"
   },
   "2025-11-29": {
     "title": "Polyball",
-    "text": "Started off terribly but we made the best out of it. I loved dancing with you. 💃🕺"
+    "text": "Started off terribly but we made the best out of it. I loved dancing with you. 💃🕺",
+    "sticker": "polaroid"
   },
   "2025-12-13": {
     "title": "Random Date",
-    "text": "Your hair looks stunning here 😍💇‍♀️"
+    "text": "Your hair looks stunning here 😍💇‍♀️",
+    "sticker": "polaroid"
   },
   "2025-12-21": {
     "title": "Gym Date",
-    "text": "Maybe one day you will have a biceps like me 💪"
+    "text": "Maybe one day you will have a biceps like me 💪",
+    "sticker": "dumbbell"
   },
   "2025-12-24": {
     "title": "Christmas",
-    "text": "We were both sick lol 🎄🤧"
+    "text": "We were both sick lol 🎄🤧",
+    "sticker": "snow"
   },
   "2026-01-01": {
     "title": "New Years Eve",
-    "text": "I love these pics 🎆🥂"
+    "text": "I love these pics 🎆🥂",
+    "sticker": "star"
   },
   "2026-01-18": {
     "title": "Reunion",
@@ -81,15 +93,18 @@
   },
   "2026-01-19": {
     "title": "Your Birthday",
-    "text": "You are absolutely gorgeous 🎂👑"
+    "text": "You are absolutely gorgeous 🎂👑",
+    "sticker": "heart"
   },
   "2026-01-25": {
     "title": "Snowboarding",
-    "text": "I could tell you don't have mountains in Kosovo 🏂🏔️"
+    "text": "I could tell you don't have mountains in Kosovo 🏂🏔️",
+    "sticker": "snow"
   },
   "2026-02-02": {
     "title": "München: Day 1",
-    "text": "Dave concert 🎤🔥"
+    "text": "Dave concert 🎤🔥",
+    "sticker": "pick"
   },
   "2026-02-03": {
     "title": "München: Day 2",
@@ -97,27 +112,33 @@
   },
   "2026-02-07": {
     "title": "Bruno Weber Park and my Dad's 50th Birthday",
-    "text": "That was a lovely day! The first time we spent an entire weekend together. 🌳🎂🥳"
+    "text": "That was a lovely day! The first time we spent an entire weekend together. 🌳🎂🥳",
+    "sticker": "pin"
   },
   "2026-02-12": {
     "title": "Random Date",
-    "text": "You stole my phone and took these adorable pics 📸🤭"
+    "text": "You stole my phone and took these adorable pics 📸🤭",
+    "sticker": "polaroid"
   },
   "2026-02-15": {
     "title": "Gambling Night",
-    "text": "Your first time in the casino. You made 50 bucks 🎰💸"
+    "text": "Your first time in the casino. You made 50 bucks 🎰💸",
+    "sticker": "dice"
   },
   "2026-02-23": {
     "title": "Gym and Lego Date",
-    "text": "Our favorite Lego set 🧱💛"
+    "text": "Our favorite Lego set 🧱💛",
+    "sticker": "brick"
   },
   "2026-02-27": {
     "title": "Gym Date",
-    "text": "You are slowly becoming a gym girlie 🏋️‍♀️💅"
+    "text": "You are slowly becoming a gym girlie 🏋️‍♀️💅",
+    "sticker": "dumbbell"
   },
   "2026-03-01": {
     "title": "A day in the WOW museum",
-    "text": "Wasn't that WOW to be fair, but you make every place interesting. 🤩🖼️"
+    "text": "Wasn't that WOW to be fair, but you make every place interesting. 🤩🖼️",
+    "sticker": "ticket"
   },
   "2026-03-03": {
     "title": "Sleepover",
@@ -129,15 +150,18 @@
   },
   "2026-03-08": {
     "title": "Game night at Carl's",
-    "text": "My anxiety was bad that day but the evening was still fun. 🎲🃏"
+    "text": "My anxiety was bad that day but the evening was still fun. 🎲🃏",
+    "sticker": "dice"
   },
   "2026-03-14": {
     "title": "Bowling with Paola and Ot",
-    "text": "That was a fun night 🎳"
+    "text": "That was a fun night 🎳",
+    "sticker": "star"
   },
   "2026-03-21": {
     "title": "Thailand: Flight there",
-    "text": "Our first vacation together aaaaaaahhhh ✈️🤩"
+    "text": "Our first vacation together aaaaaaahhhh ✈️🤩",
+    "sticker": "plane"
   },
   "2026-03-22": {
     "title": "Thailand: Day 1",
@@ -145,11 +169,13 @@
   },
   "2026-03-23": {
     "title": "Thailand: Day 2",
-    "text": "Exploring the beach and going out for dinner and drinks 🏖️🍹"
+    "text": "Exploring the beach and going out for dinner and drinks 🏖️🍹",
+    "sticker": "shell"
   },
   "2026-03-24": {
     "title": "Thailand: Day 3",
-    "text": "A long day on the boat visiting Phi Phi, Monkey Beach and more 🚤🐒🏝️"
+    "text": "A long day on the boat visiting Phi Phi, Monkey Beach and more 🚤🐒🏝️",
+    "sticker": "shell"
   },
   "2026-03-25": {
     "title": "Thailand: Day 4",
@@ -161,7 +187,8 @@
   },
   "2026-03-27": {
     "title": "Thailand: Day 6",
-    "text": "Renting a bike and riding up north 🛵🌿"
+    "text": "Renting a bike and riding up north 🛵🌿",
+    "sticker": "leaf"
   },
   "2026-03-28": {
     "title": "Thailand: Day 7",
@@ -169,7 +196,8 @@
   },
   "2026-03-29": {
     "title": "Thailand: Flight back",
-    "text": "What a lovely vacation we had ✈️🥹"
+    "text": "What a lovely vacation we had ✈️🥹",
+    "sticker": "plane"
   },
   "2026-04-03": {
     "title": "Easter Brunch",
@@ -177,23 +205,28 @@
   },
   "2026-04-11": {
     "title": "Gym Date",
-    "text": "No pain, no gain 🔥"
+    "text": "No pain, no gain 🔥",
+    "sticker": "dumbbell"
   },
   "2026-04-14": {
     "title": "Tame Impala Concert",
-    "text": "What a show 🎸🌈"
+    "text": "What a show 🎸🌈",
+    "sticker": "pick"
   },
   "2026-04-20": {
     "title": "7 Month Anniversary",
-    "text": "These flowers are so beautiful 💐❤️"
+    "text": "These flowers are so beautiful 💐❤️",
+    "sticker": "flower"
   },
   "2026-04-26": {
     "title": "Pic-Nic",
-    "text": "I love a good pic-nic with my woman 🧺🌸"
+    "text": "I love a good pic-nic with my woman 🧺🌸",
+    "sticker": "leaf"
   },
   "2026-05-07": {
     "title": "Europapark",
-    "text": "The day you conquered your fear of rollercoasters and the day you met my colleagues 🎢😱"
+    "text": "The day you conquered your fear of rollercoasters and the day you met my colleagues 🎢😱",
+    "sticker": "ticket"
   },
   "2026-05-09": {
     "title": "Rock n Roll Tournament",
@@ -213,35 +246,43 @@
   },
   "2026-05-20": {
     "title": "Olivia Dean Concert",
-    "text": "Very spontaneous decision but worth it 🎶✨"
+    "text": "Very spontaneous decision but worth it 🎶✨",
+    "sticker": "pick"
   },
   "2026-05-23": {
     "title": "Strasbourg: Day 1",
-    "text": "Exploring the city and enjoying some nice food 🍝"
+    "text": "Exploring the city and enjoying some nice food 🍝",
+    "sticker": "coffee"
   },
   "2026-05-24": {
     "title": "Strasbourg: Day 2",
-    "text": "Sightseeing like some real tourists 📷⛪"
+    "text": "Sightseeing like some real tourists 📷⛪",
+    "sticker": "polaroid"
   },
   "2026-06-20": {
     "title": "Adventure Arena",
-    "text": "Half of the games didn't even work lol 🕹️🙃"
+    "text": "Half of the games didn't even work lol 🕹️🙃",
+    "sticker": "dice"
   },
   "2026-06-27": {
     "title": "Graduation",
-    "text": "A day I won't forget 🎓"
+    "text": "A day I won't forget 🎓",
+    "sticker": "cap"
   },
   "2026-07-04": {
     "title": "Hiking to Saxerlücke",
-    "text": "Easy hike with impressive scenery 🥾⛰️"
+    "text": "Easy hike with impressive scenery 🥾⛰️",
+    "sticker": "leaf"
   },
   "2026-07-11": {
     "title": "Albania: Day 1",
-    "text": "Once in a lifetime opportunity to see Kanye West live 🌟"
+    "text": "Once in a lifetime opportunity to see Kanye West live 🌟",
+    "sticker": "pick"
   },
   "2026-07-12": {
     "title": "Albania: Day 2",
-    "text": "A long drive to Pristina airport where I met your uncle for the first time 🚗✈️"
+    "text": "A long drive to Pristina airport where I met your uncle for the first time 🚗✈️",
+    "sticker": "plane"
   },
   "2026-07-20": {
     "title": "Mallorca: Day 1",
@@ -249,7 +290,8 @@
   },
   "2026-07-21": {
     "title": "Mallorca: Day 2",
-    "text": "Beach day and tasty steak for dinner 🏖️🥩"
+    "text": "Beach day and tasty steak for dinner 🏖️🥩",
+    "sticker": "shell"
   },
   "2026-07-22": {
     "title": "Mallorca: Day 3",
@@ -257,46 +299,61 @@
   },
   "2026-07-23": {
     "title": "Mallorca: Day 4",
-    "text": "Yet exploring another beach, and a natural pool with a restaurant 🏝️💦🍽️"
+    "text": "Yet exploring another beach, and a natural pool with a restaurant 🏝️💦🍽️",
+    "sticker": "shell"
   },
   "2026-07-24": {
     "title": "Flight Back",
-    "text": "Ready to catch the next flight in the evening 🧳✈️"
+    "text": "Ready to catch the next flight in the evening 🧳✈️",
+    "sticker": "plane"
   },
   "2026-07-25": {
     "title": "London: Day 1",
-    "text": "Shopping and Bruno Mars concert 🛍️🎤"
+    "text": "Shopping and Bruno Mars concert 🛍️🎤",
+    "sticker": "pick"
   },
   "2026-07-26": {
     "title": "London: Day 2",
-    "text": "Strolling through Notting Hill 🏘️☕"
+    "text": "Strolling through Notting Hill 🏘️☕",
+    "sticker": "coffee"
   },
   "2026-08-02": {
     "title": "Via Ferrata with Carl & Auri",
-    "text": "You were not afraid at all 🧗‍♀️"
+    "text": "You were not afraid at all 🧗‍♀️",
+    "sticker": "clip"
   },
   "2026-08-07": {
     "title": "Dinner Date",
-    "text": "Ofc steak, what else 🥩"
+    "text": "Ofc steak, what else 🥩",
+    "sticker": "matchbook"
   },
   "2026-08-08": {
     "title": "Seenachtsfest",
-    "text": "Fun evening with my colleagues 🎆🎡"
+    "text": "Fun evening with my colleagues 🎆🎡",
+    "sticker": "star"
   },
   "2026-08-12": {
     "title": "Solar eclipse",
-    "text": "And a pic-nic... 🌒🧺"
+    "text": "And a pic-nic... 🌒🧺",
+    "sticker": "star"
   },
   "2026-08-14": {
     "title": "Surprise Birthday Party",
-    "text": "I had no idea. This was the best gift ever. That night was our first time in the club together. 🥰🪩"
+    "text": "I had no idea. This was the best gift ever. That night was our first time in the club together. 🥰🪩",
+    "sticker": "heart"
+  },
+  "2026-08-15": {
+    "title": "Weekend in Stetten: Day 1",
+    "text": "Swimming in the pool and visiting Noah's bar in the evening 🏊‍♂️",
+    "sticker": "coffee"
   },
   "2026-08-16": {
-    "title": "Visiting Schaffhausen",
-    "text": "Swimming in the pool, eating selfmade Pizza and helping my sister cook 🏊‍♂️🍕🧑‍🍳"
+    "title": "Weekend in Stetten: Day 2",
+    "text": "Eating selfmade Pizza and helping my sister cook 🍕🧑‍🍳"
   },
   "2026-09-11": {
     "title": "First Day at the Hospital",
-    "text": "Thank you for your support! 🏥❤️"
+    "text": "Thank you for your support! 🏥❤️",
+    "sticker": "heart"
   }
 }
