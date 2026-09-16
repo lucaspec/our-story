@@ -146,6 +146,38 @@ Two conventions worth keeping if you add dates later:
   the pieces read as things that were kept rather than as decoration when they are the
   exception rather than the rule.
 
+### Grouping a trip
+
+A week away lands in the timeline as seven separate dates, which reads as seven separate
+outings. `public/data/trips.json` folds a run of days into one kraft folder with a
+stamped cover:
+
+```json
+{
+  "trips": [
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "stamp": "Phuket",
+      "from": "2026-03-21",
+      "to": "2026-03-29",
+      "ink": "var(--teal)"
+    }
+  ]
+}
+```
+
+Every date between `from` and `to` (both inclusive) is filed inside, so extending a trip
+is a matter of widening the range — the dates keep their own entries in `captions.json`
+and their own cards, photos and ephemera. `stamp` is the text curved around the customs
+stamp on the cover; `ink` colours that stamp and the tape holding the folder down, and
+takes any of the accent variables.
+
+Two things happen automatically. The day count on the cover is the calendar span, not
+the number of cards, so a quiet day you took no photos on still counts. And a card
+titled `"Thailand: Day 3"` shows as just `Day 3` inside the folder, since the cover
+already says where you were — the caption itself is left exactly as written.
+
 ## 7. Deploy it — privately
 
 Your photos and `public/data/events.json` are listed in `.gitignore` on purpose, so they
@@ -176,6 +208,7 @@ config.json                    Site title, names, anniversary start date, map de
 scripts/import-photos.mjs      Imports a photo folder -> public/data/events.json + photos
 public/data/events.sample.json Demo data shown until you run the import script
 public/data/captions.json      Your hand-written titles/text per date, keyed by date
+public/data/trips.json         The multi-day trips folded into one folder in the timeline
 public/sample-photos/          Placeholder images used by the demo data
 src/                           The React app (Timeline view, Map view)
 ```
@@ -198,6 +231,11 @@ A few details worth knowing before you change them:
   wave will push cards off screen. Each card hides the cord behind it, so the curve
   hangs straight down and only swings across in the open gap below — `SWING_LEAD` is
   how far above a card's bottom edge that swing starts.
+- A trip is a single stop on that thread: the folder knots once at the top and the days
+  inside are strung on a stitched seam of their own
+  (`src/components/Timeline/TripSection.jsx`, `.trip__*` in the stylesheet). The folder
+  is deliberately darker than the board — `--folder` — so the pages read as tucked into
+  something, and the pages inside are narrower than the ones out on the open board.
 - The thread stitches itself in as you scroll, and the pages fade up as they arrive
   (`src/hooks/useReveal.js`). Both respect `prefers-reduced-motion`.
 - The album arrives shut and tied with a ribbon (`src/components/Intro.jsx`); one click

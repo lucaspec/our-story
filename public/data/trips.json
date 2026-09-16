@@ -1,0 +1,53 @@
+{
+  "_comment": "Multi-day trips, grouped in the timeline. Any date between `from` and `to` (both inclusive) is folded into the trip, so adding a day to a trip is a matter of widening the range — the dates keep their own entries in captions.json. `stamp` is the text inked around the passport stamp on the folder; `ink` is the colour of that stamp and of the tape holding the folder down.",
+  "trips": [
+    {
+      "id": "muenchen",
+      "name": "München",
+      "stamp": "Deutschland",
+      "from": "2026-02-02",
+      "to": "2026-02-03",
+      "ink": "var(--cherry)"
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "stamp": "Phuket",
+      "from": "2026-03-21",
+      "to": "2026-03-29",
+      "ink": "var(--teal)"
+    },
+    {
+      "id": "strasbourg",
+      "name": "Strasbourg",
+      "stamp": "France",
+      "from": "2026-05-23",
+      "to": "2026-05-24",
+      "ink": "var(--olive)"
+    },
+    {
+      "id": "albania",
+      "name": "Albania",
+      "stamp": "Shqipëria",
+      "from": "2026-07-11",
+      "to": "2026-07-12",
+      "ink": "var(--rust-deep)"
+    },
+    {
+      "id": "mallorca",
+      "name": "Mallorca",
+      "stamp": "España",
+      "from": "2026-07-20",
+      "to": "2026-07-24",
+      "ink": "var(--mustard)"
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "stamp": "England",
+      "from": "2026-07-25",
+      "to": "2026-07-26",
+      "ink": "var(--cherry-bright)"
+    }
+  ]
+}

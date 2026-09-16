@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import EventCard from './EventCard.jsx';
+import TripSection from './TripSection.jsx';
 import { useReveal } from '../../hooks/useReveal.js';
 import { monthKey, monthLabel } from '../../utils/format.js';
 
@@ -19,6 +20,14 @@ const SWING_LEAD = 90;
 // How many points we sample along the thread to map a y position back to a
 // point on the curve, for the needle that rides the tip while you scroll.
 const SAMPLES = 320;
+// How much of the sideways swing each kind of row takes. Chapter plates and
+// trip folders swing less than cards — they are wider, and they read as
+// anchors rather than beads on the thread.
+function dampingOf(row) {
+  if (row.classList.contains('chapter')) return 0.45;
+  if (row.classList.contains('trip')) return 0.28;
+  return 1;
+}
 
 function buildThreadPath(points) {
   if (points.length === 0) return '';
@@ -33,23 +42,53 @@ function buildThreadPath(points) {
   return d;
 }
 
+// The trip a date falls inside, if any. ISO dates compare correctly as strings.
+function tripFor(trips, date) {
+  return trips.find((trip) => date >= trip.from && date <= trip.to) || null;
+}
+
 // Interleave month dividers into the event list so half a year of dates reads
-// as chapters instead of one endless column.
-function buildItems(events) {
+// as chapters instead of one endless column, and collect the days of a trip
+// into a single item so nine days in Thailand read as one journey.
+//
+// `index` stays the running position of the event in the whole year — it seeds
+// each card's tilt and its piece of ephemera, so it must not restart per trip.
+function buildItems(events, trips) {
   const items = [];
   let seenMonth = null;
-  events.forEach((event, index) => {
+  let index = 0;
+  let i = 0;
+
+  while (i < events.length) {
+    const event = events[i];
     const key = monthKey(event.date);
     if (key !== seenMonth) {
       items.push({ type: 'chapter', key, ...monthLabel(event.date) });
       seenMonth = key;
     }
-    items.push({ type: 'event', key: event.id, event, index });
-  });
+
+    const trip = tripFor(trips, event.date);
+    if (!trip) {
+      items.push({ type: 'event', key: event.id, event, index: index++ });
+      i += 1;
+      continue;
+    }
+
+    const days = [];
+    while (i < events.length && tripFor(trips, events[i].date) === trip) {
+      days.push({ event: events[i], index: index++ });
+      i += 1;
+    }
+    // A trip that runs over the end of a month keeps its days together — the
+    // next month's plate would otherwise cut the folder in half.
+    seenMonth = monthKey(days[days.length - 1].event.date);
+    items.push({ type: 'trip', key: `trip-${trip.id}`, trip, days });
+  }
+
   return items;
 }
 
-export default function Timeline({ events, startDate, focusedEventId }) {
+export default function Timeline({ events, trips, startDate, focusedEventId }) {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
   const maskRef = useRef(null);
@@ -57,7 +96,7 @@ export default function Timeline({ events, startDate, focusedEventId }) {
   const samplesRef = useRef([]);
   const [thread, setThread] = useState({ d: '', width: 0, height: 0 });
 
-  const items = useMemo(() => buildItems(events), [events]);
+  const items = useMemo(() => buildItems(events, trips), [events, trips]);
 
   useReveal(containerRef, [events.length]);
 
@@ -75,9 +114,7 @@ export default function Timeline({ events, startDate, focusedEventId }) {
       const amplitude = Math.max(0, Math.min(MAX_AMPLITUDE, slack * 0.5));
 
       rows.forEach((row, i) => {
-        // Chapter plates swing less than cards so they still read as anchors.
-        const damping = row.classList.contains('chapter') ? 0.45 : 1;
-        const offset = Math.round(Math.sin(i * WAVE_FREQUENCY) * amplitude * damping);
+        const offset = Math.round(Math.sin(i * WAVE_FREQUENCY) * amplitude * dampingOf(row));
         row.style.setProperty('--snake-offset', `${offset}px`);
       });
 
@@ -114,7 +151,7 @@ export default function Timeline({ events, startDate, focusedEventId }) {
     });
 
     return () => ro.disconnect();
-  }, [events]);
+  }, [events, trips]);
 
   // Reveal the thread from the top down as the page scrolls, with a needle
   // sitting at the point it has reached.
@@ -231,6 +268,14 @@ export default function Timeline({ events, startDate, focusedEventId }) {
                 </h2>
               </div>
             </li>
+          ) : item.type === 'trip' ? (
+            <TripSection
+              key={item.key}
+              trip={item.trip}
+              days={item.days}
+              startDate={startDate}
+              focusedEventId={focusedEventId}
+            />
           ) : (
             <EventCard
               key={item.key}

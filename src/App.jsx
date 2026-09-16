@@ -12,7 +12,7 @@ import MusicPlayer from './components/MusicPlayer.jsx';
 import Intro, { shouldOpenAlbum } from './components/Intro.jsx';
 
 export default function App() {
-  const { loading, events, isSample } = useEvents();
+  const { loading, events, trips, isSample } = useEvents();
   const [view, setView] = useState('timeline');
   const [focusedEventId, setFocusedEventId] = useState(null);
   const [intro, setIntro] = useState(shouldOpenAlbum);
@@ -47,6 +47,7 @@ export default function App() {
         ) : view === 'timeline' ? (
           <Timeline
             events={sortedEvents}
+            trips={trips}
             startDate={config.startDate}
             focusedEventId={focusedEventId}
           />

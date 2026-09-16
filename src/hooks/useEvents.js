@@ -7,13 +7,17 @@ import { useEffect, useState } from 'react';
 // public/data/captions.json is separate and hand-written: { "<event date>": { "title",
 // "text" } }. It's kept apart from events.json so re-running the import script never
 // wipes out captions you've written, and merged onto events here by date.
-async function loadCaptions() {
+//
+// public/data/trips.json is hand-written too, and lists the multi-day trips the
+// timeline folds into one folder. It stays out of the events by design — a trip is
+// a span of dates, not a date, so the timeline groups by it rather than merging it in.
+async function loadJson(path, fallback) {
   try {
-    const res = await fetch('/data/captions.json', { cache: 'no-store' });
-    if (!res.ok) return {};
+    const res = await fetch(path, { cache: 'no-store' });
+    if (!res.ok) return fallback;
     return await res.json();
   } catch {
-    return {};
+    return fallback;
   }
 }
 
@@ -24,20 +28,30 @@ function withCaptions(events, captions) {
 }
 
 export function useEvents() {
-  const [state, setState] = useState({ loading: true, events: [], isSample: false, error: null });
+  const [state, setState] = useState({
+    loading: true,
+    events: [],
+    trips: [],
+    isSample: false,
+    error: null,
+  });
 
   useEffect(() => {
     let cancelled = false;
 
     async function load() {
-      const captions = await loadCaptions();
+      const [captions, tripData] = await Promise.all([
+        loadJson('/data/captions.json', {}),
+        loadJson('/data/trips.json', {}),
+      ]);
+      const trips = tripData.trips || [];
 
       try {
         const real = await fetch('/data/events.json', { cache: 'no-store' });
         if (real.ok) {
           const json = await real.json();
           if (!cancelled) {
-            setState({ loading: false, events: withCaptions(json.events || [], captions), isSample: false, error: null });
+            setState({ loading: false, events: withCaptions(json.events || [], captions), trips, isSample: false, error: null });
           }
           return;
         }
@@ -49,10 +63,10 @@ export function useEvents() {
         const sample = await fetch('/data/events.sample.json', { cache: 'no-store' });
         const json = await sample.json();
         if (!cancelled) {
-          setState({ loading: false, events: withCaptions(json.events || [], captions), isSample: true, error: null });
+          setState({ loading: false, events: withCaptions(json.events || [], captions), trips, isSample: true, error: null });
         }
       } catch (err) {
-        if (!cancelled) setState({ loading: false, events: [], isSample: false, error: err.message });
+        if (!cancelled) setState({ loading: false, events: [], trips, isSample: false, error: err.message });
       }
     }
 

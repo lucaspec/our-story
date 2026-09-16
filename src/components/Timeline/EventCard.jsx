@@ -18,12 +18,21 @@ function layoutOf(count) {
   return 'grid';
 }
 
-export default function EventCard({ event, index, startDate, autoFocus }) {
+// Inside a folder the cover already says "Thailand", so "Thailand: Day 3"
+// only has to say "Day 3". The caption itself is left as written.
+function cardTitle(event, trip) {
+  const title = event.title || '';
+  const prefix = trip ? `${trip.name}: ` : '';
+  return prefix && title.startsWith(prefix) ? title.slice(prefix.length) : title;
+}
+
+export default function EventCard({ event, index, startDate, autoFocus, trip }) {
   const ref = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const day = dayNumber(event.date, startDate);
   const stamp = dateParts(event.date);
   const place = prettyPlace(event.location?.name);
+  const title = cardTitle(event, trip);
 
   useEffect(() => {
     if (autoFocus && ref.current) {
@@ -69,7 +78,7 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
               {day >= 0 && <span className="event-card__day">Day {day.toLocaleString()}</span>}
               <span className="event-card__weekday">{formatWeekday(event.date)}</span>
             </p>
-            <h3 className="event-card__title">{event.title || formatDate(event.date)}</h3>
+            <h3 className="event-card__title">{title || formatDate(event.date)}</h3>
             {place && (
               <p className="event-card__location">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
