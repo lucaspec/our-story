@@ -231,7 +231,7 @@ A few details worth knowing before you change them:
   wave will push cards off screen. Each card hides the cord behind it, so the curve
   hangs straight down and only swings across in the open gap below — `SWING_LEAD` is
   how far above a card's bottom edge that swing starts.
-- Search (`src/components/Search.jsx`) is the round **find** tab above **music**, or `/`
+- Search (`src/components/Search.jsx`) is the round **find** tab in the bottom-left corner, below **music**, or `/`
   and ⌘K / Ctrl+K from anywhere. It matches every word you type against a date's title,
   caption, place, trip and the date itself spelled out ("March", "Saturday",
   "2026-03-21"), ignoring case and accents so "munchen" finds München. Trip folders are

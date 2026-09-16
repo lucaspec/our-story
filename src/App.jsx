@@ -67,7 +67,6 @@ export default function App() {
         </p>
       </footer>
       {view === 'timeline' && sortedEvents.length > 0 && <JumpToMonth events={sortedEvents} />}
-      {config.spotifyPlaylist && <MusicPlayer playlist={config.spotifyPlaylist} />}
       {sortedEvents.length > 0 && (
         <Search
           events={sortedEvents}
@@ -76,6 +75,7 @@ export default function App() {
           onSelectTrip={focusTrip}
         />
       )}
+      {config.spotifyPlaylist && <MusicPlayer playlist={config.spotifyPlaylist} />}
       <BackToTop />
       {intro && <Intro config={config} onDone={closeIntro} />}
     </div>
