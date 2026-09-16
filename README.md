@@ -107,7 +107,7 @@ date, edit `public/data/captions.json`:
 The key is the event's date (`YYYY-MM-DD`, matching the date shown in the timeline).
 `title`, `text` and `sticker` are all optional — add just the ones you want.
 
-`sticker` pins a piece of ephemera to the card — a ticket stub for a gig, a pressed
+`sticker` pins a piece of ephemera to the card — a ticket stub from a gig, a pressed
 flower, a ring where somebody set a mug down:
 
 ```json
@@ -115,21 +115,36 @@ flower, a ring where somebody set a mug down:
   "2026-04-14": {
     "title": "Tame Impala Concert",
     "text": "What a show 🎸🌈",
-    "sticker": "pick"
+    "sticker": "ticket"
   }
 }
 ```
 
-One of: `ticket`, `flower`, `coffee`, `star`, `clip`, `leaf`, `heart`, `plane`, `shell`,
-`pick`, `dice`, `brick`, `snow`, `cap`, `matchbook`, `pin`, `polaroid`, `dumbbell`. Each
-one picks its own corner, size, angle and colour from the card, so the same kind on two
-different dates does not look stamped from a template. An unknown name is ignored, so a
-typo can never break a card. Leave the field off for most dates — the pieces read as
-things you kept rather than decoration when they are the exception. This file is separate
-from `events.json` on purpose: re-running the import script regenerates `events.json`
-from your photos, but never touches `captions.json`, so your captions are safe across
-re-imports. It's committed to git (unlike your photos), so back it up/version it like any
-other text file.
+The 55 kinds available:
+
+| | |
+| --- | --- |
+| **Paper & post** | `ticket` `envelope` `parcel` `passport` `polaroid` `matchbook` `clip` `pin` `camera` |
+| **Pressed & picked** | `flower` `leaf` `bouquet` `palm` `shell` `egg` |
+| **Nights out** | `pick` `bowtie` `discoball` `cocktail` `chip` `dice` `bowling` `joystick` `firework` `confetti` |
+| **Table** | `coffee` `burger` `steak` `pizza` `pretzel` `cake` `basket` |
+| **Travel** | `plane` `car` `scooter` `boat` `suitcase` `parasol` `balloon` `ferris` |
+| **Weather & sky** | `snow` `eclipse` `star` |
+| **Keepsakes** | `heart` `ring` `crown` `kiss` `monkey` `bauble` `lifebuoy` `horse` `brick` `palette` `cap` `dumbbell` |
+
+Each piece picks its own corner, size, angle and accent colour from the card, so no two
+sit in a template position. An unknown name is ignored, so a typo can never break a card.
+
+Two conventions worth keeping if you add dates later:
+
+- **One kind per date.** Every sticker is used exactly once across the whole year, so no
+  two cards carry the same object. The single exception is `ticket`, reserved for
+  concerts and tinted a different colour on each — the mapping lives in `TICKET_INKS` in
+  `src/components/Timeline/Sticker.jsx`.
+- **Leave most dates bare.** Currently 57 of 76 dates carry one. The repeat gym sessions,
+  the filler "random date" entries and the quieter middle days of long trips have none —
+  the pieces read as things that were kept rather than as decoration when they are the
+  exception rather than the rule.
 
 ## 7. Deploy it — privately
 
@@ -190,8 +205,10 @@ A few details worth knowing before you change them:
   lives in `sessionStorage`, so closing the tab and coming back opens it again — and is
   skipped outright for anyone who has asked for reduced motion. Escape or the skip button
   cuts it short at any point.
-- The ephemera lives in `src/components/Timeline/Sticker.jsx`. Each piece declares which
-  slots on the card it may sit in (a coffee ring soaks into a corner, a paperclip only
-  goes on an edge), and everything else about it — the exact corner, the size, the angle,
-  the accent colour, whether it is mirrored — is drawn from the card's index via the same
+- The ephemera lives in `src/components/Timeline/Sticker.jsx` — the artwork is inline
+  SVG, painted by a small set of shared classes in the `Ephemera` block of
+  `global.css`. Each piece declares which slots on the card it may sit in (a coffee ring
+  soaks into a corner, a paperclip only goes on an edge, a wide piece never hangs off a
+  side), and everything else about it — the exact corner, the size, the angle, the accent
+  colour, whether it is mirrored — is drawn from the card's index via the same
   deterministic `jitter()` the tilts use, so it stays put across re-renders.

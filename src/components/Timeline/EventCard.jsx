@@ -117,7 +117,7 @@ export default function EventCard({ event, index, startDate, autoFocus }) {
         )}
 
         {/* Last, so the ephemera sits on top of the page rather than under it. */}
-        {event.sticker && <Sticker type={event.sticker} seed={index} />}
+        {event.sticker && <Sticker type={event.sticker} seed={index} date={event.date} />}
       </article>
 
       {lightboxIndex !== null && (

@@ -2384,13 +2384,13 @@ body::before {
   width: 46px;
   height: 42px;
   filter: none;
-  opacity: 0.6;
+  opacity: 0.78;
 }
 
 .sticker__ink {
   fill: none;
   stroke: var(--ink-soft);
-  stroke-width: 1.7;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -2403,9 +2403,9 @@ body::before {
 }
 
 .sticker__shell {
-  fill: #e4d3b4;
-  stroke: rgba(122, 96, 54, 0.6);
-  stroke-width: 1.1;
+  fill: #f7e8d2;
+  stroke: rgba(112, 84, 44, 0.8);
+  stroke-width: 1.5;
 }
 
 .sticker__rib {
@@ -2572,6 +2572,296 @@ body::before {
   stroke-width: 3;
   stroke-linecap: round;
 }
+
+/* ---- the day you met, and the weeks after ---------------------------- */
+
+[data-sticker='confetti'] { width: 46px; height: 42px; }
+
+.sticker__flake { stroke: rgba(48, 32, 12, 0.22); stroke-width: 0.5; }
+.sticker__flake--0 { fill: var(--cherry); }
+.sticker__flake--1 { fill: var(--mustard); }
+.sticker__flake--2 { fill: var(--teal); }
+.sticker__flake--3 { fill: var(--olive); }
+
+[data-sticker='envelope'] { width: 48px; height: 34px; }
+
+.sticker__paper {
+  fill: var(--paper-bright);
+  stroke: rgba(92, 70, 36, 0.45);
+  stroke-width: 1.1;
+}
+
+.sticker__fold {
+  fill: none;
+  stroke: rgba(92, 70, 36, 0.45);
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+}
+
+[data-sticker='parcel'] { width: 42px; height: 38px; }
+
+.sticker__kraft {
+  fill: #c2a06c;
+  stroke: rgba(84, 60, 24, 0.5);
+  stroke-width: 1;
+}
+
+.sticker__twine {
+  fill: none;
+  stroke: rgba(70, 50, 20, 0.7);
+  stroke-width: 1.8;
+}
+
+.sticker__label {
+  fill: var(--paper-bright);
+  stroke: rgba(84, 60, 24, 0.4);
+  stroke-width: 0.8;
+}
+
+[data-sticker='ring'] { width: 34px; height: 40px; }
+
+.sticker__band {
+  fill: none;
+  stroke: var(--mustard);
+  stroke-width: 3.4;
+}
+
+.sticker__gem {
+  fill: #bcd8dd;
+  stroke: rgba(58, 96, 104, 0.6);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+[data-sticker='lifebuoy'] { width: 40px; height: 40px; }
+
+.sticker__buoy {
+  fill: var(--paper-bright);
+  stroke: rgba(92, 70, 36, 0.45);
+  stroke-width: 1.2;
+}
+
+.sticker__buoy-hole { fill: var(--paper); stroke: rgba(92, 70, 36, 0.35); stroke-width: 1; }
+
+.sticker__buoy-band {
+  fill: none;
+  stroke: var(--cherry);
+  stroke-width: 7;
+}
+
+/* ---- autumn ----------------------------------------------------------- */
+
+[data-sticker='monkey'] { width: 42px; height: 40px; }
+
+.sticker__fur { fill: #a9793f; stroke: rgba(70, 44, 12, 0.5); stroke-width: 1; }
+.sticker__ear { fill: #d9b184; }
+.sticker__muzzle { fill: #e6c79d; stroke: rgba(70, 44, 12, 0.3); stroke-width: 0.8; }
+.sticker__eye { fill: rgba(40, 26, 10, 0.85); }
+.sticker__smile { fill: none; stroke: rgba(70, 44, 12, 0.6); stroke-width: 1.3; stroke-linecap: round; }
+
+[data-sticker='palette'] { width: 44px; height: 38px; }
+
+.sticker__board { fill: #c9a874; stroke: rgba(84, 60, 24, 0.55); stroke-width: 1.1; }
+.sticker__thumb { fill: var(--paper); stroke: rgba(84, 60, 24, 0.45); stroke-width: 0.9; }
+.sticker__daub { stroke: rgba(48, 32, 12, 0.25); stroke-width: 0.6; }
+.sticker__daub--0 { fill: var(--cherry); }
+.sticker__daub--1 { fill: var(--mustard); }
+.sticker__daub--2 { fill: var(--teal); }
+.sticker__daub--3 { fill: var(--olive); }
+
+[data-sticker='kiss'] { width: 40px; height: 30px; filter: none; opacity: 0.8; mix-blend-mode: multiply; }
+
+.sticker__lips { fill: var(--cherry); opacity: 0.85; -webkit-mask-image: var(--wear); mask-image: var(--wear); -webkit-mask-size: 90px; mask-size: 90px; }
+.sticker__lip-line { fill: none; stroke: rgba(96, 28, 24, 0.5); stroke-width: 1; }
+
+[data-sticker='bowtie'] { width: 46px; height: 26px; }
+
+.sticker__knot { fill: var(--sticker-hue, var(--cherry)); stroke: rgba(48, 32, 12, 0.5); stroke-width: 1; filter: brightness(0.85); }
+
+/* ---- winter ------------------------------------------------------------ */
+
+[data-sticker='bauble'] { width: 32px; height: 44px; }
+
+.sticker__hook { fill: none; stroke: #9aa0a6; stroke-width: 1.8; }
+.sticker__cap { fill: var(--mustard); stroke: rgba(120, 88, 14, 0.5); stroke-width: 0.9; }
+.sticker__bauble-band { fill: none; stroke: rgba(255, 252, 240, 0.55); stroke-width: 2; }
+
+[data-sticker='firework'] { width: 42px; height: 42px; }
+
+.sticker__spark { fill: none; stroke: var(--mustard); stroke-width: 2; stroke-linecap: round; }
+.sticker__spark-tip { fill: var(--cherry-bright); }
+.sticker__spark-core { fill: var(--mustard); }
+
+[data-sticker='crown'] { width: 46px; height: 34px; }
+
+.sticker__gold { fill: var(--mustard); stroke: rgba(120, 88, 14, 0.6); stroke-width: 1; stroke-linejoin: round; }
+.sticker__jewel { fill: var(--cherry); }
+
+[data-sticker='pretzel'] { width: 44px; height: 38px; }
+
+.sticker__dough {
+  fill: none;
+  stroke: #b5803c;
+  stroke-width: 4.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-sticker='cake'] { width: 42px; height: 38px; }
+
+.sticker__candle { fill: none; stroke: var(--paper-bright); stroke-width: 2.6; }
+.sticker__flame { fill: var(--mustard); }
+.sticker__frosting { fill: var(--paper-bright); stroke: rgba(92, 70, 36, 0.35); stroke-width: 0.9; }
+.sticker__sponge { fill: #c08b56; stroke: rgba(84, 60, 24, 0.5); stroke-width: 0.9; }
+.sticker__drip { fill: none; stroke: var(--paper-bright); stroke-width: 2.4; stroke-linecap: round; }
+
+[data-sticker='chip'] { width: 36px; height: 36px; }
+
+.sticker__chip-notch { fill: var(--paper-bright); }
+.sticker__chip-face { fill: var(--paper-bright); opacity: 0.9; }
+.sticker__chip-ring { fill: none; stroke: var(--sticker-hue, var(--cherry)); stroke-width: 2.2; }
+
+/* ---- spring, and Thailand ---------------------------------------------- */
+
+[data-sticker='bowling'] { width: 24px; height: 44px; }
+
+.sticker__pin-body { fill: var(--paper-bright); stroke: rgba(92, 70, 36, 0.5); stroke-width: 1.1; }
+.sticker__pin-stripe { fill: none; stroke: var(--cherry); stroke-width: 2.2; }
+
+[data-sticker='boat'] { width: 42px; height: 40px; }
+
+.sticker__sail { fill: var(--paper-bright); stroke: rgba(92, 70, 36, 0.5); stroke-width: 1.2; stroke-linejoin: round; }
+.sticker__hull { fill: var(--rust); stroke: rgba(92, 52, 12, 0.5); stroke-width: 1; stroke-linejoin: round; }
+.sticker__wave { fill: none; stroke: var(--teal); stroke-width: 1.6; stroke-linecap: round; }
+
+[data-sticker='palm'] { width: 40px; height: 46px; }
+
+.sticker__trunk { fill: none; stroke: #9c7442; stroke-width: 3; stroke-linecap: round; }
+.sticker__frond { fill: var(--olive); stroke: rgba(70, 82, 38, 0.5); stroke-width: 0.8; }
+.sticker__coconut { fill: #7b5a2e; }
+
+[data-sticker='scooter'] { width: 48px; height: 34px; }
+
+.sticker__tyre { fill: none; stroke: rgba(48, 44, 40, 0.75); stroke-width: 3; }
+.sticker__frame { fill: none; stroke: var(--teal); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+
+[data-sticker='cocktail'] { width: 36px; height: 42px; }
+
+.sticker__glass { fill: rgba(190, 216, 214, 0.55); stroke: rgba(58, 96, 104, 0.65); stroke-width: 1.4; stroke-linejoin: round; }
+.sticker__straw { fill: none; stroke: var(--cherry); stroke-width: 2; stroke-linecap: round; }
+.sticker__cherry { fill: var(--cherry-bright); }
+
+[data-sticker='passport'] { width: 36px; height: 44px; }
+
+.sticker__cover { fill: #3f5d70; stroke: rgba(24, 38, 48, 0.6); stroke-width: 1; }
+.sticker__crest { fill: none; stroke: var(--mustard); stroke-width: 1.6; stroke-linecap: round; }
+.sticker__crest-ring { fill: none; stroke: var(--mustard); stroke-width: 1.6; }
+
+/* ---- spring at home ----------------------------------------------------- */
+
+[data-sticker='egg'] { width: 32px; height: 42px; }
+
+.sticker__shell-egg { fill: var(--paper-bright); stroke: rgba(92, 70, 36, 0.5); stroke-width: 1.1; }
+.sticker__egg-band { fill: none; stroke: var(--teal); stroke-width: 2.2; }
+.sticker__egg-zig { fill: none; stroke: var(--cherry); stroke-width: 1.6; stroke-linejoin: round; }
+
+[data-sticker='bouquet'] { width: 40px; height: 48px; }
+
+.sticker__wrap { fill: #e0d2b2; stroke: rgba(92, 70, 36, 0.45); stroke-width: 1; stroke-linejoin: round; }
+.sticker__bouquet-stem { fill: none; stroke: #6f7b46; stroke-width: 1.4; stroke-linecap: round; }
+.sticker__bloom { stroke: rgba(72, 40, 46, 0.35); stroke-width: 0.8; }
+.sticker__bloom--0 { fill: #d9a8b4; }
+.sticker__bloom--1 { fill: var(--mustard); opacity: 0.85; }
+.sticker__bloom--2 { fill: #c98a9c; }
+.sticker__bloom--3 { fill: #e2c0c8; }
+.sticker__bloom-eye { fill: var(--mustard); }
+
+[data-sticker='basket'] { width: 44px; height: 38px; }
+
+.sticker__handle { fill: none; stroke: #a87f45; stroke-width: 2.6; }
+.sticker__wicker { fill: #c9a267; stroke: rgba(84, 60, 24, 0.5); stroke-width: 1; stroke-linejoin: round; }
+.sticker__weave { fill: none; stroke: rgba(84, 60, 24, 0.4); stroke-width: 1; }
+
+[data-sticker='balloon'] { width: 30px; height: 46px; }
+
+.sticker__string { fill: none; stroke: rgba(70, 50, 20, 0.55); stroke-width: 1.2; }
+.sticker__knot-tri { fill: var(--sticker-hue, var(--cherry)); filter: brightness(0.85); }
+
+/* ---- summer -------------------------------------------------------------- */
+
+[data-sticker='burger'] { width: 44px; height: 34px; }
+
+.sticker__bun { fill: #cd9a54; stroke: rgba(84, 60, 24, 0.5); stroke-width: 1; stroke-linejoin: round; }
+.sticker__lettuce { fill: var(--olive); stroke: rgba(70, 82, 38, 0.4); stroke-width: 0.8; stroke-linejoin: round; }
+.sticker__patty { fill: #7a4a28; stroke: rgba(50, 28, 12, 0.5); stroke-width: 0.9; }
+.sticker__seed { fill: rgba(255, 250, 232, 0.8); }
+
+[data-sticker='camera'] { width: 46px; height: 36px; }
+
+.sticker__body { fill: #4a4540; stroke: rgba(26, 22, 18, 0.6); stroke-width: 1; stroke-linejoin: round; }
+.sticker__lens { fill: #2e2a26; stroke: rgba(180, 176, 168, 0.5); stroke-width: 1.4; }
+.sticker__lens-glass { fill: #7d96a0; }
+.sticker__flash { fill: var(--mustard); }
+
+[data-sticker='joystick'] { width: 36px; height: 42px; }
+
+.sticker__base { fill: #55504a; stroke: rgba(26, 22, 18, 0.55); stroke-width: 1; stroke-linejoin: round; }
+.sticker__shaft { fill: none; stroke: #8d939a; stroke-width: 3.4; stroke-linecap: round; }
+.sticker__button { fill: var(--mustard); }
+
+[data-sticker='car'] { width: 48px; height: 30px; }
+
+.sticker__chassis { fill: var(--teal); stroke: rgba(30, 62, 64, 0.55); stroke-width: 1; stroke-linejoin: round; }
+.sticker__window { fill: #cfe0e2; stroke: rgba(30, 62, 64, 0.4); stroke-width: 0.8; stroke-linejoin: round; }
+
+[data-sticker='parasol'] { width: 44px; height: 44px; }
+
+.sticker__pole { fill: none; stroke: #9c7442; stroke-width: 2.4; stroke-linecap: round; }
+.sticker__canopy { fill: var(--cherry); stroke: rgba(92, 32, 26, 0.5); stroke-width: 1; stroke-linejoin: round; }
+.sticker__canopy-rib { fill: none; stroke: rgba(255, 250, 238, 0.65); stroke-width: 1.6; }
+
+[data-sticker='horse'] { width: 36px; height: 42px; }
+
+.sticker__hide { fill: #8d939a; stroke: rgba(48, 44, 40, 0.6); stroke-width: 1; stroke-linejoin: round; }
+.sticker__nail { fill: rgba(40, 36, 32, 0.7); }
+
+[data-sticker='suitcase'] { width: 42px; height: 36px; }
+
+.sticker__handle-bar { fill: none; stroke: #6b625a; stroke-width: 2.4; stroke-linejoin: round; }
+.sticker__case { fill: #8a5f39; stroke: rgba(56, 36, 12, 0.55); stroke-width: 1; }
+.sticker__strap { fill: none; stroke: rgba(48, 30, 10, 0.55); stroke-width: 2.2; }
+.sticker__buckle { fill: var(--mustard); }
+
+[data-sticker='steak'] { width: 44px; height: 36px; }
+
+.sticker__meat { fill: #9c4436; stroke: rgba(70, 26, 18, 0.55); stroke-width: 1; }
+.sticker__fat { fill: none; stroke: #e6d4b4; stroke-width: 2.6; stroke-linecap: round; }
+.sticker__grill { fill: none; stroke: rgba(50, 18, 12, 0.55); stroke-width: 1.6; stroke-linecap: round; }
+
+[data-sticker='ferris'] { width: 42px; height: 46px; }
+
+.sticker__wheel { fill: none; stroke: var(--rust); stroke-width: 1.8; }
+.sticker__rig { fill: none; stroke: #7d7168; stroke-width: 2.2; stroke-linecap: round; }
+.sticker__spoke { fill: none; stroke: var(--rust); stroke-width: 1.2; opacity: 0.7; }
+.sticker__cab { fill: var(--mustard); stroke: rgba(120, 88, 14, 0.5); stroke-width: 0.7; }
+.sticker__hub { fill: var(--rust); }
+
+[data-sticker='eclipse'] { width: 42px; height: 42px; }
+
+.sticker__corona { fill: none; stroke: var(--mustard); stroke-width: 2.2; stroke-linecap: round; }
+.sticker__sun { fill: var(--mustard); }
+.sticker__moon { fill: #4a3f30; }
+
+[data-sticker='discoball'] { width: 36px; height: 44px; }
+
+.sticker__ball { fill: #97a7b0; stroke: rgba(40, 52, 60, 0.5); stroke-width: 1; }
+.sticker__facet { fill: none; stroke: rgba(255, 255, 255, 0.35); stroke-width: 0.9; }
+
+[data-sticker='pizza'] { width: 38px; height: 42px; }
+
+.sticker__crust { fill: #d3a463; stroke: rgba(84, 60, 24, 0.5); stroke-width: 1; stroke-linejoin: round; }
+.sticker__cheese { fill: var(--mustard); stroke: none; }
+.sticker__pepperoni { fill: var(--cherry); }
 
 /* ============================================================================
    Responsive
