@@ -1611,9 +1611,8 @@ body::before {
 
 .trip__stamp {
   flex: 0 0 auto;
-  width: clamp(76px, 16vw, 110px);
+  width: clamp(72px, 15vw, 102px);
   height: auto;
-  margin: -1.1rem -2.4rem -0.4rem 0;
   color: var(--trip-ink, var(--rust));
   opacity: 0.82;
   rotate: -11deg;
@@ -3188,9 +3187,7 @@ body::before {
   }
 
   .trip__stamp {
-    width: 72px;
-    /* No room to let it hang over the edge at this width. */
-    margin: -0.35rem -0.15rem -0.2rem 0;
+    width: 68px;
   }
 
   .trip__meta {
