@@ -1,0 +1,1953 @@
+{
+  "generatedAt": "2026-09-16T08:51:19.368Z",
+  "events": [
+    {
+      "id": "evt-2025-08-09",
+      "date": "2025-08-09",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.36345,
+        "lng": 8.5344
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-08-09/cdc4e3e788bc-thumb.webp",
+          "full": "/photos/2025-08-09/cdc4e3e788bc-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-08-09/4d6de7b954b5-thumb.webp",
+          "full": "/photos/2025-08-09/4d6de7b954b5-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-08-15",
+      "date": "2025-08-15",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-08-15/68b3498e6f87-thumb.webp",
+          "full": "/photos/2025-08-15/68b3498e6f87-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-08-18",
+      "date": "2025-08-18",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-08-18/f15a7d8cbaaf-thumb.webp",
+          "full": "/photos/2025-08-18/f15a7d8cbaaf-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-08-21",
+      "date": "2025-08-21",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-08-21/c620efdfd5d1-thumb.webp",
+          "full": "/photos/2025-08-21/c620efdfd5d1-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-09-20",
+      "date": "2025-09-20",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4111,
+        "lng": 8.4048
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-09-20/b0dfbd6fb008-thumb.webp",
+          "full": "/photos/2025-09-20/b0dfbd6fb008-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-09-20/c88ca98c2585-thumb.webp",
+          "full": "/photos/2025-09-20/c88ca98c2585-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-09-27",
+      "date": "2025-09-27",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-09-27/d4b47adc0f80-thumb.webp",
+          "full": "/photos/2025-09-27/d4b47adc0f80-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-09-27/63d82ae1f5cc-thumb.webp",
+          "full": "/photos/2025-09-27/63d82ae1f5cc-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-09-27/eed5479ecf92-thumb.webp",
+          "full": "/photos/2025-09-27/eed5479ecf92-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-10-02",
+      "date": "2025-10-02",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.3851849,
+        "lng": 8.5172756
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-10-02/7b52b201092b-thumb.webp",
+          "full": "/photos/2025-10-02/7b52b201092b-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-02/c9359ef00c9a-thumb.webp",
+          "full": "/photos/2025-10-02/c9359ef00c9a-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-02/5188d5986166-thumb.webp",
+          "full": "/photos/2025-10-02/5188d5986166-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-10-08",
+      "date": "2025-10-08",
+      "location": {
+        "name": "Stetten (SH), Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.739349999999995,
+        "lng": 8.6651306
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-10-08/c57b58fcad44-thumb.webp",
+          "full": "/photos/2025-10-08/c57b58fcad44-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-08/e7c9e890bc1c-thumb.webp",
+          "full": "/photos/2025-10-08/e7c9e890bc1c-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-10-29",
+      "date": "2025-10-29",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4110306,
+        "lng": 8.404791699999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-10-29/3182e28224f6-thumb.webp",
+          "full": "/photos/2025-10-29/3182e28224f6-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-29/051356ca7ce8-thumb.webp",
+          "full": "/photos/2025-10-29/051356ca7ce8-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-29/0a66db2f15d3-thumb.webp",
+          "full": "/photos/2025-10-29/0a66db2f15d3-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-10-31",
+      "date": "2025-10-31",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-10-31/f66ba31c7d9c-thumb.webp",
+          "full": "/photos/2025-10-31/f66ba31c7d9c-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-31/eb2cea18cf30-thumb.webp",
+          "full": "/photos/2025-10-31/eb2cea18cf30-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-10-31/1ce5808039ab-thumb.webp",
+          "full": "/photos/2025-10-31/1ce5808039ab-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-03",
+      "date": "2025-11-03",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.367449066666666,
+        "lng": 8.5257694
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-11-03/81d70631f4fe-thumb.webp",
+          "full": "/photos/2025-11-03/81d70631f4fe-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-03/a51b6b657126-thumb.webp",
+          "full": "/photos/2025-11-03/a51b6b657126-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-03/ee8baf852e84-thumb.webp",
+          "full": "/photos/2025-11-03/ee8baf852e84-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-03/d8e71d69337c-thumb.webp",
+          "full": "/photos/2025-11-03/d8e71d69337c-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-09",
+      "date": "2025-11-09",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.37051776,
+        "lng": 8.548677759999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-11-09/7b8223abc3b9-thumb.webp",
+          "full": "/photos/2025-11-09/7b8223abc3b9-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-09/b9d3d454eddb-thumb.webp",
+          "full": "/photos/2025-11-09/b9d3d454eddb-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-09/a343ed021365-thumb.webp",
+          "full": "/photos/2025-11-09/a343ed021365-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-09/8bad1dbe4166-thumb.webp",
+          "full": "/photos/2025-11-09/8bad1dbe4166-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-09/409b97e5577f-thumb.webp",
+          "full": "/photos/2025-11-09/409b97e5577f-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-10",
+      "date": "2025-11-10",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4110222,
+        "lng": 8.404791699999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-11-10/263a4c57f710-thumb.webp",
+          "full": "/photos/2025-11-10/263a4c57f710-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-10/91478ba3c9ed-thumb.webp",
+          "full": "/photos/2025-11-10/91478ba3c9ed-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-27",
+      "date": "2025-11-27",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-11-27/dfe2858b52c8-thumb.webp",
+          "full": "/photos/2025-11-27/dfe2858b52c8-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-11-29",
+      "date": "2025-11-29",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.37654859999999,
+        "lng": 8.54813885
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-11-29/877901b59a60-thumb.webp",
+          "full": "/photos/2025-11-29/877901b59a60-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/2f1d62f8a07d-thumb.webp",
+          "full": "/photos/2025-11-29/2f1d62f8a07d-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/e9907c528636-thumb.webp",
+          "full": "/photos/2025-11-29/e9907c528636-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/19095b81c072-thumb.webp",
+          "full": "/photos/2025-11-29/19095b81c072-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/45c943a936b4-thumb.webp",
+          "full": "/photos/2025-11-29/45c943a936b4-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/2ef63cfa3603-thumb.webp",
+          "full": "/photos/2025-11-29/2ef63cfa3603-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/48b24a6d42af-thumb.webp",
+          "full": "/photos/2025-11-29/48b24a6d42af-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/c6b88c9b3581-thumb.webp",
+          "full": "/photos/2025-11-29/c6b88c9b3581-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-11-29/4c5998cfb5ce-thumb.webp",
+          "full": "/photos/2025-11-29/4c5998cfb5ce-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-12-13",
+      "date": "2025-12-13",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4110028,
+        "lng": 8.4048389
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-12-13/c3ed36c129c6-thumb.webp",
+          "full": "/photos/2025-12-13/c3ed36c129c6-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-12-13/933cff6cbb91-thumb.webp",
+          "full": "/photos/2025-12-13/933cff6cbb91-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-12-13/30b5c9f74abc-thumb.webp",
+          "full": "/photos/2025-12-13/30b5c9f74abc-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-12-21",
+      "date": "2025-12-21",
+      "location": {
+        "name": "Schlieren, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.39744165,
+        "lng": 8.46451665
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2025-12-21/3cbb83287cd2-thumb.webp",
+          "full": "/photos/2025-12-21/3cbb83287cd2-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-12-21/3e772de89509-thumb.webp",
+          "full": "/photos/2025-12-21/3e772de89509-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2025-12-24",
+      "date": "2025-12-24",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2025-12-24/89659dcfbc83-thumb.webp",
+          "full": "/photos/2025-12-24/89659dcfbc83-full.webp"
+        },
+        {
+          "thumb": "/photos/2025-12-24/6771f6992afa-thumb.webp",
+          "full": "/photos/2025-12-24/6771f6992afa-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-01-01",
+      "date": "2026-01-01",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-01-01/94c5d1d38e5a-thumb.webp",
+          "full": "/photos/2026-01-01/94c5d1d38e5a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-01/fcb4d2c689d7-thumb.webp",
+          "full": "/photos/2026-01-01/fcb4d2c689d7-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-01/0480240831e4-thumb.webp",
+          "full": "/photos/2026-01-01/0480240831e4-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-01-18",
+      "date": "2026-01-18",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.41092406666667,
+        "lng": 8.404648166666666
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-01-18/085655166688-thumb.webp",
+          "full": "/photos/2026-01-18/085655166688-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-18/e708b42b762e-thumb.webp",
+          "full": "/photos/2026-01-18/e708b42b762e-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-18/742322ab630c-thumb.webp",
+          "full": "/photos/2026-01-18/742322ab630c-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-01-19",
+      "date": "2026-01-19",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.36631296666667,
+        "lng": 8.5466787
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-01-19/7e6e5dd2522a-thumb.webp",
+          "full": "/photos/2026-01-19/7e6e5dd2522a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-19/a7787bb77de4-thumb.webp",
+          "full": "/photos/2026-01-19/a7787bb77de4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-19/80d4694912d5-thumb.webp",
+          "full": "/photos/2026-01-19/80d4694912d5-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-01-25",
+      "date": "2026-01-25",
+      "location": {
+        "name": "Einsiedeln, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.09605695,
+        "lng": 8.72022365
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-01-25/b862b1ef38ef-thumb.webp",
+          "full": "/photos/2026-01-25/b862b1ef38ef-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-25/01c958f4921a-thumb.webp",
+          "full": "/photos/2026-01-25/01c958f4921a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-25/b5ccc3493373-thumb.webp",
+          "full": "/photos/2026-01-25/b5ccc3493373-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-25/637e400aa7be-thumb.webp",
+          "full": "/photos/2026-01-25/637e400aa7be-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-01-25/daa36edfbe04-thumb.webp",
+          "full": "/photos/2026-01-25/daa36edfbe04-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-02",
+      "date": "2026-02-02",
+      "location": {
+        "name": "München, Deutschland",
+        "lat": 48.175974999999994,
+        "lng": 11.552462966666667
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-02/eff90a642130-thumb.webp",
+          "full": "/photos/2026-02-02/eff90a642130-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/d276ca6eea09-thumb.webp",
+          "full": "/photos/2026-02-02/d276ca6eea09-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/a509d83f2172-thumb.webp",
+          "full": "/photos/2026-02-02/a509d83f2172-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/d2c7463b0e85-thumb.webp",
+          "full": "/photos/2026-02-02/d2c7463b0e85-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/762d9c2a8b19-thumb.webp",
+          "full": "/photos/2026-02-02/762d9c2a8b19-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/8a299375b169-thumb.webp",
+          "full": "/photos/2026-02-02/8a299375b169-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/5cb585f9f811-thumb.webp",
+          "full": "/photos/2026-02-02/5cb585f9f811-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/dbfcda87fec8-thumb.webp",
+          "full": "/photos/2026-02-02/dbfcda87fec8-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-02/67ba32deacc1-thumb.webp",
+          "full": "/photos/2026-02-02/67ba32deacc1-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-03",
+      "date": "2026-02-03",
+      "location": {
+        "name": "München, Deutschland",
+        "lat": 48.13692722,
+        "lng": 11.57143668
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-03/17ccc2b8f50a-thumb.webp",
+          "full": "/photos/2026-02-03/17ccc2b8f50a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-03/5830c4c6bd4b-thumb.webp",
+          "full": "/photos/2026-02-03/5830c4c6bd4b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-03/aafab5822066-thumb.webp",
+          "full": "/photos/2026-02-03/aafab5822066-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-03/669a3e3072c2-thumb.webp",
+          "full": "/photos/2026-02-03/669a3e3072c2-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-03/56f3060c01bb-thumb.webp",
+          "full": "/photos/2026-02-03/56f3060c01bb-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-07",
+      "date": "2026-02-07",
+      "location": {
+        "name": "Regensdorf, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.459128185714285,
+        "lng": 8.469877371428572
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-07/9f4dab4a65b4-thumb.webp",
+          "full": "/photos/2026-02-07/9f4dab4a65b4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/e3eb52c29e9f-thumb.webp",
+          "full": "/photos/2026-02-07/e3eb52c29e9f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/95322d689862-thumb.webp",
+          "full": "/photos/2026-02-07/95322d689862-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/951d4c28f946-thumb.webp",
+          "full": "/photos/2026-02-07/951d4c28f946-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/5539a4f3f81f-thumb.webp",
+          "full": "/photos/2026-02-07/5539a4f3f81f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/fa69944879e6-thumb.webp",
+          "full": "/photos/2026-02-07/fa69944879e6-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/61cddd196717-thumb.webp",
+          "full": "/photos/2026-02-07/61cddd196717-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-07/c2d044af492b-thumb.webp",
+          "full": "/photos/2026-02-07/c2d044af492b-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-12",
+      "date": "2026-02-12",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.410935200000004,
+        "lng": 8.4048074
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-12/80151817acfe-thumb.webp",
+          "full": "/photos/2026-02-12/80151817acfe-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-12/0a9d9f2a8678-thumb.webp",
+          "full": "/photos/2026-02-12/0a9d9f2a8678-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-12/c5f50693cff3-thumb.webp",
+          "full": "/photos/2026-02-12/c5f50693cff3-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-15",
+      "date": "2026-02-15",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-15/9066c25dea68-thumb.webp",
+          "full": "/photos/2026-02-15/9066c25dea68-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-15/f024d4974337-thumb.webp",
+          "full": "/photos/2026-02-15/f024d4974337-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-23",
+      "date": "2026-02-23",
+      "location": {
+        "name": "Dietikon, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4109639,
+        "lng": 8.4047694
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-23/c4d448a5225c-thumb.webp",
+          "full": "/photos/2026-02-23/c4d448a5225c-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/0c31ae284d60-thumb.webp",
+          "full": "/photos/2026-02-23/0c31ae284d60-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/22bf6a4a9cd9-thumb.webp",
+          "full": "/photos/2026-02-23/22bf6a4a9cd9-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/89dc16b297ff-thumb.webp",
+          "full": "/photos/2026-02-23/89dc16b297ff-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/ba2b1a5af1c5-thumb.webp",
+          "full": "/photos/2026-02-23/ba2b1a5af1c5-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/cb2e12b07109-thumb.webp",
+          "full": "/photos/2026-02-23/cb2e12b07109-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-23/a66d0c28d4e1-thumb.webp",
+          "full": "/photos/2026-02-23/a66d0c28d4e1-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-02-27",
+      "date": "2026-02-27",
+      "location": {
+        "name": "Schlieren, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.397459233333336,
+        "lng": 8.464683366666666
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-02-27/4b1ff2822a14-thumb.webp",
+          "full": "/photos/2026-02-27/4b1ff2822a14-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-27/a4eb34147c6f-thumb.webp",
+          "full": "/photos/2026-02-27/a4eb34147c6f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-02-27/3ff270e1931c-thumb.webp",
+          "full": "/photos/2026-02-27/3ff270e1931c-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-01",
+      "date": "2026-03-01",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.37510093333333,
+        "lng": 8.540110166666667
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-01/b6732854dac4-thumb.webp",
+          "full": "/photos/2026-03-01/b6732854dac4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/47f416a01efa-thumb.webp",
+          "full": "/photos/2026-03-01/47f416a01efa-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/4fc4f7752eef-thumb.webp",
+          "full": "/photos/2026-03-01/4fc4f7752eef-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/7dc99cbf5a4a-thumb.webp",
+          "full": "/photos/2026-03-01/7dc99cbf5a4a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/0c11c92cdbe5-thumb.webp",
+          "full": "/photos/2026-03-01/0c11c92cdbe5-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/161e83c70f8d-thumb.webp",
+          "full": "/photos/2026-03-01/161e83c70f8d-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/1d6094c5eddd-thumb.webp",
+          "full": "/photos/2026-03-01/1d6094c5eddd-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/00c2575c97f2-thumb.webp",
+          "full": "/photos/2026-03-01/00c2575c97f2-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/0382e1d5d38c-thumb.webp",
+          "full": "/photos/2026-03-01/0382e1d5d38c-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/fafb57fbe2e1-thumb.webp",
+          "full": "/photos/2026-03-01/fafb57fbe2e1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/0f59185a27b0-thumb.webp",
+          "full": "/photos/2026-03-01/0f59185a27b0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/a41ae04242be-thumb.webp",
+          "full": "/photos/2026-03-01/a41ae04242be-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-01/2e9c0d53e564-thumb.webp",
+          "full": "/photos/2026-03-01/2e9c0d53e564-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-03",
+      "date": "2026-03-03",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-03/f704813a9bc3-thumb.webp",
+          "full": "/photos/2026-03-03/f704813a9bc3-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-03/e5e21f6763e8-thumb.webp",
+          "full": "/photos/2026-03-03/e5e21f6763e8-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-07",
+      "date": "2026-03-07",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-07/c1dd1bdef1e8-thumb.webp",
+          "full": "/photos/2026-03-07/c1dd1bdef1e8-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-07/c1c1bf0fa530-thumb.webp",
+          "full": "/photos/2026-03-07/c1c1bf0fa530-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-08",
+      "date": "2026-03-08",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-08/16987340ca27-thumb.webp",
+          "full": "/photos/2026-03-08/16987340ca27-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-08/794632e3cc9c-thumb.webp",
+          "full": "/photos/2026-03-08/794632e3cc9c-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-08/48165fb10a96-thumb.webp",
+          "full": "/photos/2026-03-08/48165fb10a96-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-08/d95345dae371-thumb.webp",
+          "full": "/photos/2026-03-08/d95345dae371-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-08/e15ee027df22-thumb.webp",
+          "full": "/photos/2026-03-08/e15ee027df22-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-14",
+      "date": "2026-03-14",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-14/e5a0b38e9cfa-thumb.webp",
+          "full": "/photos/2026-03-14/e5a0b38e9cfa-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-14/9d5ebcd3670a-thumb.webp",
+          "full": "/photos/2026-03-14/9d5ebcd3670a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-14/06626906661b-thumb.webp",
+          "full": "/photos/2026-03-14/06626906661b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-14/a72a397d86f0-thumb.webp",
+          "full": "/photos/2026-03-14/a72a397d86f0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-14/45ab25ee9644-thumb.webp",
+          "full": "/photos/2026-03-14/45ab25ee9644-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-21",
+      "date": "2026-03-21",
+      "location": {
+        "name": "Magulica, Bosna i Hercegovina / Босна и Херцеговина",
+        "lat": 44.2475819,
+        "lng": 18.498640249999998
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-21/291a0dc87003-thumb.webp",
+          "full": "/photos/2026-03-21/291a0dc87003-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-21/99f170ab0f33-thumb.webp",
+          "full": "/photos/2026-03-21/99f170ab0f33-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-22",
+      "date": "2026-03-22",
+      "location": {
+        "name": "ตำบลกะรน, ประเทศไทย",
+        "lat": 7.8339833,
+        "lng": 98.300775
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-22/297490c231e3-thumb.webp",
+          "full": "/photos/2026-03-22/297490c231e3-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-23",
+      "date": "2026-03-23",
+      "location": {
+        "name": "ตำบลกะรน, ประเทศไทย",
+        "lat": 7.837452799999999,
+        "lng": 98.297725675
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-23/2f6cff6a7262-thumb.webp",
+          "full": "/photos/2026-03-23/2f6cff6a7262-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-23/ab1d2d6a6aec-thumb.webp",
+          "full": "/photos/2026-03-23/ab1d2d6a6aec-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-23/82058c61d38f-thumb.webp",
+          "full": "/photos/2026-03-23/82058c61d38f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-23/cafcd35aa4e8-thumb.webp",
+          "full": "/photos/2026-03-23/cafcd35aa4e8-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-24",
+      "date": "2026-03-24",
+      "location": {
+        "name": "จังหวัดกระบี่, ประเทศไทย",
+        "lat": 7.729238500000001,
+        "lng": 98.70424564285713
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-24/794dc56cccb1-thumb.webp",
+          "full": "/photos/2026-03-24/794dc56cccb1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/10bd8424f18a-thumb.webp",
+          "full": "/photos/2026-03-24/10bd8424f18a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/f4ae90b2b2f7-thumb.webp",
+          "full": "/photos/2026-03-24/f4ae90b2b2f7-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/4ef1f1cd7622-thumb.webp",
+          "full": "/photos/2026-03-24/4ef1f1cd7622-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/9b01dee79489-thumb.webp",
+          "full": "/photos/2026-03-24/9b01dee79489-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/21426971fce4-thumb.webp",
+          "full": "/photos/2026-03-24/21426971fce4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/4e7c1e687682-thumb.webp",
+          "full": "/photos/2026-03-24/4e7c1e687682-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/1dac3035a57e-thumb.webp",
+          "full": "/photos/2026-03-24/1dac3035a57e-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/a423ee7b761a-thumb.webp",
+          "full": "/photos/2026-03-24/a423ee7b761a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/48018bb9f7f4-thumb.webp",
+          "full": "/photos/2026-03-24/48018bb9f7f4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-24/02c6d75cd192-thumb.webp",
+          "full": "/photos/2026-03-24/02c6d75cd192-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-25",
+      "date": "2026-03-25",
+      "location": {
+        "name": "ตำบลป่าตอง, ประเทศไทย",
+        "lat": 7.886480533333334,
+        "lng": 98.29030089999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-25/e77b2b7aa738-thumb.webp",
+          "full": "/photos/2026-03-25/e77b2b7aa738-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-25/255913bea6a9-thumb.webp",
+          "full": "/photos/2026-03-25/255913bea6a9-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-25/9612c4f1e50a-thumb.webp",
+          "full": "/photos/2026-03-25/9612c4f1e50a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-25/6b9fcc6c9282-thumb.webp",
+          "full": "/photos/2026-03-25/6b9fcc6c9282-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-25/84d4c0dc6fa8-thumb.webp",
+          "full": "/photos/2026-03-25/84d4c0dc6fa8-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-26",
+      "date": "2026-03-26",
+      "location": {
+        "name": "ตำบลกะรน, ประเทศไทย",
+        "lat": 7.854857433333333,
+        "lng": 98.30595833333332
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-26/3c68eaf33997-thumb.webp",
+          "full": "/photos/2026-03-26/3c68eaf33997-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/96f90e764447-thumb.webp",
+          "full": "/photos/2026-03-26/96f90e764447-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/7c6515a09e60-thumb.webp",
+          "full": "/photos/2026-03-26/7c6515a09e60-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/bcc6e8f7cb41-thumb.webp",
+          "full": "/photos/2026-03-26/bcc6e8f7cb41-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/bca15cd8c9a1-thumb.webp",
+          "full": "/photos/2026-03-26/bca15cd8c9a1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/966cddce64dd-thumb.webp",
+          "full": "/photos/2026-03-26/966cddce64dd-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-26/7e8f24f0c002-thumb.webp",
+          "full": "/photos/2026-03-26/7e8f24f0c002-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-27",
+      "date": "2026-03-27",
+      "location": {
+        "name": "ตำบลเชิงทะเล, ประเทศไทย",
+        "lat": 7.974311133333333,
+        "lng": 98.27883426666665
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-27/cb55579ba70b-thumb.webp",
+          "full": "/photos/2026-03-27/cb55579ba70b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/a8dcbede7f09-thumb.webp",
+          "full": "/photos/2026-03-27/a8dcbede7f09-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/d63e23d9ac6e-thumb.webp",
+          "full": "/photos/2026-03-27/d63e23d9ac6e-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/0d586a642d57-thumb.webp",
+          "full": "/photos/2026-03-27/0d586a642d57-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/9e289443a06f-thumb.webp",
+          "full": "/photos/2026-03-27/9e289443a06f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/49fe6ff75ef4-thumb.webp",
+          "full": "/photos/2026-03-27/49fe6ff75ef4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-27/4c33d9cf6e26-thumb.webp",
+          "full": "/photos/2026-03-27/4c33d9cf6e26-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-28",
+      "date": "2026-03-28",
+      "location": {
+        "name": "ตำบลป่าตอง, ประเทศไทย",
+        "lat": 7.881110199999999,
+        "lng": 98.27727036666666
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-28/eefc4dd5cbf7-thumb.webp",
+          "full": "/photos/2026-03-28/eefc4dd5cbf7-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-28/6a54572d17b1-thumb.webp",
+          "full": "/photos/2026-03-28/6a54572d17b1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-28/122388e45ffd-thumb.webp",
+          "full": "/photos/2026-03-28/122388e45ffd-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-28/2254c0e8bbc2-thumb.webp",
+          "full": "/photos/2026-03-28/2254c0e8bbc2-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-03-29",
+      "date": "2026-03-29",
+      "location": {
+        "name": "อำเภอถลาง, ประเทศไทย",
+        "lat": 8.107105599999999,
+        "lng": 98.30331389999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-03-29/220b30fe2fa1-thumb.webp",
+          "full": "/photos/2026-03-29/220b30fe2fa1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-03-29/6080c4a69329-thumb.webp",
+          "full": "/photos/2026-03-29/6080c4a69329-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-04-03",
+      "date": "2026-04-03",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-04-03/b30f99fce3c0-thumb.webp",
+          "full": "/photos/2026-04-03/b30f99fce3c0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-03/de4919c56792-thumb.webp",
+          "full": "/photos/2026-04-03/de4919c56792-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-03/b884390d3d02-thumb.webp",
+          "full": "/photos/2026-04-03/b884390d3d02-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-03/0e9d3642b8cf-thumb.webp",
+          "full": "/photos/2026-04-03/0e9d3642b8cf-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-03/12e454e2bba1-thumb.webp",
+          "full": "/photos/2026-04-03/12e454e2bba1-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-04-11",
+      "date": "2026-04-11",
+      "location": {
+        "name": "Schlieren, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.397369399999995,
+        "lng": 8.464588899999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-04-11/a9172cb470fc-thumb.webp",
+          "full": "/photos/2026-04-11/a9172cb470fc-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-11/627d04ecc0d0-thumb.webp",
+          "full": "/photos/2026-04-11/627d04ecc0d0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-11/8190907f83d2-thumb.webp",
+          "full": "/photos/2026-04-11/8190907f83d2-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-04-14",
+      "date": "2026-04-14",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.4115796,
+        "lng": 8.551748166666664
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-04-14/463c5f5182bc-thumb.webp",
+          "full": "/photos/2026-04-14/463c5f5182bc-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-14/52ec6d70c6dc-thumb.webp",
+          "full": "/photos/2026-04-14/52ec6d70c6dc-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-14/1eb64bc18ffb-thumb.webp",
+          "full": "/photos/2026-04-14/1eb64bc18ffb-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-14/c2b3084666f4-thumb.webp",
+          "full": "/photos/2026-04-14/c2b3084666f4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-14/ff23415960c4-thumb.webp",
+          "full": "/photos/2026-04-14/ff23415960c4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-14/7993eee52f62-thumb.webp",
+          "full": "/photos/2026-04-14/7993eee52f62-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-04-20",
+      "date": "2026-04-20",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-04-20/7988680da187-thumb.webp",
+          "full": "/photos/2026-04-20/7988680da187-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-20/875650d5a4ee-thumb.webp",
+          "full": "/photos/2026-04-20/875650d5a4ee-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-20/bc8e1a6984a6-thumb.webp",
+          "full": "/photos/2026-04-20/bc8e1a6984a6-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-04-26",
+      "date": "2026-04-26",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.39955695,
+        "lng": 8.490375
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-04-26/f8d11b65d269-thumb.webp",
+          "full": "/photos/2026-04-26/f8d11b65d269-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-04-26/3d9fece7056e-thumb.webp",
+          "full": "/photos/2026-04-26/3d9fece7056e-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-07",
+      "date": "2026-05-07",
+      "location": {
+        "name": "Rust, Deutschland",
+        "lat": 48.265029850000005,
+        "lng": 7.719702775
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-07/a542cb133145-thumb.webp",
+          "full": "/photos/2026-05-07/a542cb133145-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-07/e9ff2d7f6c5a-thumb.webp",
+          "full": "/photos/2026-05-07/e9ff2d7f6c5a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-07/d9a001db9b52-thumb.webp",
+          "full": "/photos/2026-05-07/d9a001db9b52-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-07/c611f5445b3f-thumb.webp",
+          "full": "/photos/2026-05-07/c611f5445b3f-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-07/f8bc1920bf76-thumb.webp",
+          "full": "/photos/2026-05-07/f8bc1920bf76-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-09",
+      "date": "2026-05-09",
+      "location": {
+        "name": "Hüttlingen, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.57104353333333,
+        "lng": 9.0041852
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-09/2218b2419260-thumb.webp",
+          "full": "/photos/2026-05-09/2218b2419260-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-09/4630397abae9-thumb.webp",
+          "full": "/photos/2026-05-09/4630397abae9-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-09/0eb7872e3ee1-thumb.webp",
+          "full": "/photos/2026-05-09/0eb7872e3ee1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-09/38494caa53cb-thumb.webp",
+          "full": "/photos/2026-05-09/38494caa53cb-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-10",
+      "date": "2026-05-10",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.37589165,
+        "lng": 8.536183350000002
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-10/f285c7a9a4db-thumb.webp",
+          "full": "/photos/2026-05-10/f285c7a9a4db-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-10/8ce7dc1739f9-thumb.webp",
+          "full": "/photos/2026-05-10/8ce7dc1739f9-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-14",
+      "date": "2026-05-14",
+      "location": {
+        "name": "Geroldswil, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.417222249999995,
+        "lng": 8.407156950000001
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-14/469a882215b6-thumb.webp",
+          "full": "/photos/2026-05-14/469a882215b6-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-14/803e18dbd009-thumb.webp",
+          "full": "/photos/2026-05-14/803e18dbd009-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-19",
+      "date": "2026-05-19",
+      "location": {
+        "name": "Schlieren, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.39722915,
+        "lng": 8.46439445
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-19/06679d9fd913-thumb.webp",
+          "full": "/photos/2026-05-19/06679d9fd913-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-19/0f3497cee9b3-thumb.webp",
+          "full": "/photos/2026-05-19/0f3497cee9b3-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-19/419da837ab03-thumb.webp",
+          "full": "/photos/2026-05-19/419da837ab03-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-20",
+      "date": "2026-05-20",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.411466649999994,
+        "lng": 8.551402799999998
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-20/dd911ec23656-thumb.webp",
+          "full": "/photos/2026-05-20/dd911ec23656-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-20/cf34853ea0ab-thumb.webp",
+          "full": "/photos/2026-05-20/cf34853ea0ab-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-23",
+      "date": "2026-05-23",
+      "location": {
+        "name": "Strasbourg, France",
+        "lat": 48.59000369999999,
+        "lng": 7.730703716666667
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-23/42d7020dacee-thumb.webp",
+          "full": "/photos/2026-05-23/42d7020dacee-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/d5675bd2e3aa-thumb.webp",
+          "full": "/photos/2026-05-23/d5675bd2e3aa-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/263842b09d0a-thumb.webp",
+          "full": "/photos/2026-05-23/263842b09d0a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/345040f66ac4-thumb.webp",
+          "full": "/photos/2026-05-23/345040f66ac4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/d4dc3e1b0297-thumb.webp",
+          "full": "/photos/2026-05-23/d4dc3e1b0297-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/20108221d3f1-thumb.webp",
+          "full": "/photos/2026-05-23/20108221d3f1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-23/96e01f12ad20-thumb.webp",
+          "full": "/photos/2026-05-23/96e01f12ad20-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-05-24",
+      "date": "2026-05-24",
+      "location": {
+        "name": "Strasbourg, France",
+        "lat": 48.58262873333334,
+        "lng": 7.7468435
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-05-24/b9717b8935ed-thumb.webp",
+          "full": "/photos/2026-05-24/b9717b8935ed-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-24/6ec2a6d0f7ec-thumb.webp",
+          "full": "/photos/2026-05-24/6ec2a6d0f7ec-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-24/02fc06b1374a-thumb.webp",
+          "full": "/photos/2026-05-24/02fc06b1374a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-05-24/71814114bcf5-thumb.webp",
+          "full": "/photos/2026-05-24/71814114bcf5-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-06-20",
+      "date": "2026-06-20",
+      "location": {
+        "name": "Dübendorf, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.39529166666667,
+        "lng": 8.601784266666668
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-06-20/c5ee34cd34c3-thumb.webp",
+          "full": "/photos/2026-06-20/c5ee34cd34c3-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-06-20/3f0ab01a18c4-thumb.webp",
+          "full": "/photos/2026-06-20/3f0ab01a18c4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-06-20/e3379112b3f9-thumb.webp",
+          "full": "/photos/2026-06-20/e3379112b3f9-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-06-27",
+      "date": "2026-06-27",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-06-27/85641c360c97-thumb.webp",
+          "full": "/photos/2026-06-27/85641c360c97-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-06-27/aa238d135c48-thumb.webp",
+          "full": "/photos/2026-06-27/aa238d135c48-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-06-27/128657682c39-thumb.webp",
+          "full": "/photos/2026-06-27/128657682c39-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-04",
+      "date": "2026-07-04",
+      "location": {
+        "name": "Sax, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.24691875,
+        "lng": 9.448711825
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-04/f8dc19448600-thumb.webp",
+          "full": "/photos/2026-07-04/f8dc19448600-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/82e959cf75c8-thumb.webp",
+          "full": "/photos/2026-07-04/82e959cf75c8-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/9ae3f1173ba2-thumb.webp",
+          "full": "/photos/2026-07-04/9ae3f1173ba2-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/ed3dbd537bb1-thumb.webp",
+          "full": "/photos/2026-07-04/ed3dbd537bb1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/81f17e461637-thumb.webp",
+          "full": "/photos/2026-07-04/81f17e461637-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/185a722847c6-thumb.webp",
+          "full": "/photos/2026-07-04/185a722847c6-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-04/c741457d743d-thumb.webp",
+          "full": "/photos/2026-07-04/c741457d743d-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-11",
+      "date": "2026-07-11",
+      "location": {
+        "name": "Dejë-Macukull, Shqipëria",
+        "lat": 41.673103971428574,
+        "lng": 20.136365085714285
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-11/0de918f3718c-thumb.webp",
+          "full": "/photos/2026-07-11/0de918f3718c-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/7dc077120f43-thumb.webp",
+          "full": "/photos/2026-07-11/7dc077120f43-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/9c94d257f05d-thumb.webp",
+          "full": "/photos/2026-07-11/9c94d257f05d-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/4f592d11202b-thumb.webp",
+          "full": "/photos/2026-07-11/4f592d11202b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/08fdfe833f68-thumb.webp",
+          "full": "/photos/2026-07-11/08fdfe833f68-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/0a1abccb18f0-thumb.webp",
+          "full": "/photos/2026-07-11/0a1abccb18f0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-11/757f2b2bd85f-thumb.webp",
+          "full": "/photos/2026-07-11/757f2b2bd85f-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-12",
+      "date": "2026-07-12",
+      "location": {
+        "name": "Lurë, Shqipëria",
+        "lat": 41.75335743333333,
+        "lng": 20.178654633333334
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-12/056b89f8b106-thumb.webp",
+          "full": "/photos/2026-07-12/056b89f8b106-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-12/7187589e06d2-thumb.webp",
+          "full": "/photos/2026-07-12/7187589e06d2-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-12/e73cb96e3a10-thumb.webp",
+          "full": "/photos/2026-07-12/e73cb96e3a10-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-20",
+      "date": "2026-07-20",
+      "location": {
+        "name": "Caimari, España",
+        "lat": 39.7379704,
+        "lng": 2.9079315
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-20/5633c5f3b1d9-thumb.webp",
+          "full": "/photos/2026-07-20/5633c5f3b1d9-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-20/eaa9542f2cc0-thumb.webp",
+          "full": "/photos/2026-07-20/eaa9542f2cc0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-20/b56982abd450-thumb.webp",
+          "full": "/photos/2026-07-20/b56982abd450-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-20/03e0f8cd6562-thumb.webp",
+          "full": "/photos/2026-07-20/03e0f8cd6562-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-21",
+      "date": "2026-07-21",
+      "location": {
+        "name": "Llubí, España",
+        "lat": 39.68427406666666,
+        "lng": 3.0348388666666666
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-21/ef090747306c-thumb.webp",
+          "full": "/photos/2026-07-21/ef090747306c-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-21/a5d11c92461e-thumb.webp",
+          "full": "/photos/2026-07-21/a5d11c92461e-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-21/617947394e10-thumb.webp",
+          "full": "/photos/2026-07-21/617947394e10-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-22",
+      "date": "2026-07-22",
+      "location": {
+        "name": "Port de Pollença, España",
+        "lat": 39.899404616666665,
+        "lng": 3.1055537
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-22/8c8a73aab0a6-thumb.webp",
+          "full": "/photos/2026-07-22/8c8a73aab0a6-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/6e66aab2fa31-thumb.webp",
+          "full": "/photos/2026-07-22/6e66aab2fa31-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/0602794b92fa-thumb.webp",
+          "full": "/photos/2026-07-22/0602794b92fa-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/88ff8601c37d-thumb.webp",
+          "full": "/photos/2026-07-22/88ff8601c37d-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/1964a7c31d5e-thumb.webp",
+          "full": "/photos/2026-07-22/1964a7c31d5e-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/eeb4714879f0-thumb.webp",
+          "full": "/photos/2026-07-22/eeb4714879f0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-22/4357becc7a4f-thumb.webp",
+          "full": "/photos/2026-07-22/4357becc7a4f-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-23",
+      "date": "2026-07-23",
+      "location": {
+        "name": "Escorca, España",
+        "lat": 39.803329174999995,
+        "lng": 2.87533195
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-23/f3a900352bf4-thumb.webp",
+          "full": "/photos/2026-07-23/f3a900352bf4-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-23/6eeb1be69989-thumb.webp",
+          "full": "/photos/2026-07-23/6eeb1be69989-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-23/e2bff53a8704-thumb.webp",
+          "full": "/photos/2026-07-23/e2bff53a8704-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-23/14febbb4144d-thumb.webp",
+          "full": "/photos/2026-07-23/14febbb4144d-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-24",
+      "date": "2026-07-24",
+      "location": {
+        "name": "Jonen, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.2961056,
+        "lng": 8.4040194
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-24/79fcb96afd20-thumb.webp",
+          "full": "/photos/2026-07-24/79fcb96afd20-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-24/ffc09753c071-thumb.webp",
+          "full": "/photos/2026-07-24/ffc09753c071-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-24/0e769d8e8c59-thumb.webp",
+          "full": "/photos/2026-07-24/0e769d8e8c59-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-25",
+      "date": "2026-07-25",
+      "location": {
+        "name": "Greater London, United Kingdom",
+        "lat": 51.54042067777777,
+        "lng": -0.2121030888888889
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-25/10502f1c0de1-thumb.webp",
+          "full": "/photos/2026-07-25/10502f1c0de1-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/f21c1afbff45-thumb.webp",
+          "full": "/photos/2026-07-25/f21c1afbff45-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/a780e0d04793-thumb.webp",
+          "full": "/photos/2026-07-25/a780e0d04793-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/6b97d323072b-thumb.webp",
+          "full": "/photos/2026-07-25/6b97d323072b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/d918fe39cdbd-thumb.webp",
+          "full": "/photos/2026-07-25/d918fe39cdbd-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/39a7280e0181-thumb.webp",
+          "full": "/photos/2026-07-25/39a7280e0181-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/bf48c8415430-thumb.webp",
+          "full": "/photos/2026-07-25/bf48c8415430-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/753ab0aaec32-thumb.webp",
+          "full": "/photos/2026-07-25/753ab0aaec32-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-25/30050d1b2cd7-thumb.webp",
+          "full": "/photos/2026-07-25/30050d1b2cd7-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-07-26",
+      "date": "2026-07-26",
+      "location": {
+        "name": "Greater London, United Kingdom",
+        "lat": 51.51418125,
+        "lng": -0.202559025
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-07-26/2e91390162fb-thumb.webp",
+          "full": "/photos/2026-07-26/2e91390162fb-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-26/53f78dd438a0-thumb.webp",
+          "full": "/photos/2026-07-26/53f78dd438a0-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-26/ef6d378e9f4d-thumb.webp",
+          "full": "/photos/2026-07-26/ef6d378e9f4d-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-07-26/ad97303dce82-thumb.webp",
+          "full": "/photos/2026-07-26/ad97303dce82-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-02",
+      "date": "2026-08-02",
+      "location": {
+        "name": "Wassen, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 46.725286659999995,
+        "lng": 8.58906166
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-02/e1741137490a-thumb.webp",
+          "full": "/photos/2026-08-02/e1741137490a-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-02/83dbaad0d1ca-thumb.webp",
+          "full": "/photos/2026-08-02/83dbaad0d1ca-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-02/01311f8ed2e9-thumb.webp",
+          "full": "/photos/2026-08-02/01311f8ed2e9-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-02/53c71d696881-thumb.webp",
+          "full": "/photos/2026-08-02/53c71d696881-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-02/b22b5ada46a4-thumb.webp",
+          "full": "/photos/2026-08-02/b22b5ada46a4-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-07",
+      "date": "2026-08-07",
+      "location": {
+        "name": "Schlieren, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.3989111,
+        "lng": 8.4482889
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-07/9eaaaaabac24-thumb.webp",
+          "full": "/photos/2026-08-07/9eaaaaabac24-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-08",
+      "date": "2026-08-08",
+      "location": {
+        "name": "Rapperswil-Jona, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.22540553333332,
+        "lng": 8.813594433333334
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-08/83f14e2386ee-thumb.webp",
+          "full": "/photos/2026-08-08/83f14e2386ee-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-08/978005908dfd-thumb.webp",
+          "full": "/photos/2026-08-08/978005908dfd-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-08/a10fd5236032-thumb.webp",
+          "full": "/photos/2026-08-08/a10fd5236032-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-12",
+      "date": "2026-08-12",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.40660345,
+        "lng": 8.499377099999998
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-12/cdfb5001115b-thumb.webp",
+          "full": "/photos/2026-08-12/cdfb5001115b-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-12/421139aad0a8-thumb.webp",
+          "full": "/photos/2026-08-12/421139aad0a8-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-12/36085655e273-thumb.webp",
+          "full": "/photos/2026-08-12/36085655e273-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-12/7dca73865222-thumb.webp",
+          "full": "/photos/2026-08-12/7dca73865222-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-14",
+      "date": "2026-08-14",
+      "location": {
+        "name": "Zürich, Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.3917368,
+        "lng": 8.488689574999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-14/c1a275bbf543-thumb.webp",
+          "full": "/photos/2026-08-14/c1a275bbf543-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-14/92b005c89626-thumb.webp",
+          "full": "/photos/2026-08-14/92b005c89626-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-14/97a7b39e3638-thumb.webp",
+          "full": "/photos/2026-08-14/97a7b39e3638-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-14/7da7c65fa9f4-thumb.webp",
+          "full": "/photos/2026-08-14/7da7c65fa9f4-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-15",
+      "date": "2026-08-15",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-15/88ebb45b0dd0-thumb.webp",
+          "full": "/photos/2026-08-15/88ebb45b0dd0-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-08-16",
+      "date": "2026-08-16",
+      "location": {
+        "name": "Stetten (SH), Schweiz/Suisse/Svizzera/Svizra",
+        "lat": 47.739361099999996,
+        "lng": 8.665122199999999
+      },
+      "photos": [
+        {
+          "thumb": "/photos/2026-08-16/cd0e396ca0b7-thumb.webp",
+          "full": "/photos/2026-08-16/cd0e396ca0b7-full.webp"
+        },
+        {
+          "thumb": "/photos/2026-08-16/ecf6437b767d-thumb.webp",
+          "full": "/photos/2026-08-16/ecf6437b767d-full.webp"
+        }
+      ]
+    },
+    {
+      "id": "evt-2026-09-11",
+      "date": "2026-09-11",
+      "location": null,
+      "photos": [
+        {
+          "thumb": "/photos/2026-09-11/6ba856670908-thumb.webp",
+          "full": "/photos/2026-09-11/6ba856670908-full.webp"
+        }
+      ]
+    }
+  ]
+}
