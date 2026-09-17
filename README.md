@@ -197,9 +197,16 @@ Then deploy `dist/` with whichever you prefer:
 - **Just for yourselves:** `npm run preview` serves the production build locally — good
   enough if you just want to open it on your laptop or share your screen.
 
-If you'd rather host on GitHub Pages, you'd need to commit `dist/` (or the photos) to a
-branch — only do that if this repository is **private**, since GitHub Pages sites (and
-public repos) are visible to anyone with the link.
+- **GitHub Pages (`1-year.majmunijem.com`):** `npm run deploy` builds the site and
+  force-pushes `dist/` as a single commit to the `gh-pages` branch. The custom domain comes
+  from `public/CNAME`. Note that this puts the photos in the `gh-pages` branch, and GitHub
+  Pages sites are public to anyone with the link — keep the repository **private** if you
+  don't want the photos browsable on GitHub too.
+
+  One-time setup: in Namecheap → Domain List → Manage → Advanced DNS, add a
+  `CNAME Record` with host `1-year` and value `lucaspec.github.io.`; then in the GitHub
+  repo → Settings → Pages, pick "Deploy from a branch" → `gh-pages` / `(root)`, confirm
+  the custom domain, and tick "Enforce HTTPS" once the certificate is issued.
 
 ## Project structure
 
